@@ -1,0 +1,26 @@
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-03-13T15:52:12Z">
+		<header>
+			<authorName>Daniel Schultheis</authorName>
+			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="tx_djdb_domain_model_set.title">
+				<source><![CDATA[Set]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.title">
+				<source><![CDATA[Title]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.title">
+				<source><![CDATA[Track]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.title">
+				<source><![CDATA[Title]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.artist">
+				<source><![CDATA[artist]]></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
