@@ -13,6 +13,11 @@ class Track extends AbstractDomainObject
     protected $title = '';
 
     /**
+     * @var string
+     */
+    protected $artist = '';
+
+    /**
      * Get the value of title
      *
      * @return string
@@ -30,5 +35,25 @@ class Track extends AbstractDomainObject
     public function setTitle(string $title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * Get the value of artist
+     *
+     * @return string
+     */
+    public function getArtist(): string
+    {
+        return $this->artist;
+    }
+
+    /**
+     * Set the value of artist
+     *
+     * @param string $artist
+     */
+    public function setArtist(string $artist)
+    {
+        $this->artist = $artist;
     }
 }

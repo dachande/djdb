@@ -9,5 +9,6 @@ CREATE TABLE tx_djdb_domain_model_set (
 # Table structure for table 'tx_djdb_domain_model_track'
 #
 CREATE TABLE tx_djdb_domain_model_track (
-  title tinytext
+  title tinytext,
+  artist tinytext
 );

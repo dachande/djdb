@@ -199,12 +199,22 @@ return call_user_func(function () {
                     'eval' => 'trim,required',
                 ],
             ],
+            'artist' => [
+                'exclude' => true,
+                'label' => $ll . 'field.artist',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim,required',
+                ],
+            ],
         ],
         'types' => [
             '1' => [
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         title,
+                        artist,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
