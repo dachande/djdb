@@ -1,0 +1,29 @@
+{
+	"name": "dachande/djdb",
+	"description": "DJ Set database extension for TYPO3",
+	"type": "typo3-cms-extension",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Daniel Schultheis",
+			"email": "d.schultheis@kabel-salat.net"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^9.5",
+		"fluidtypo3/vhs": "^5.2"
+	},
+	"replace": {
+		"djdb": "self.version"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "djdb"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Dachande\\Djdb\\": "Classes/"
+		}
+	}
+}
