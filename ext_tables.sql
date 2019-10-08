@@ -29,3 +29,10 @@ CREATE TABLE tx_djdb_domain_model_track (
   -- download int(11) unsigned DEFAULT '0' NOT NULL,
   set_position tinytext
 );
+
+#
+# Table structure for table 'tx_djdb_domain_model_genre'
+#
+CREATE TABLE tx_djdb_domain_model_genre (
+  name tinytext
+);
