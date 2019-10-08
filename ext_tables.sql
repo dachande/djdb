@@ -36,3 +36,12 @@ CREATE TABLE tx_djdb_domain_model_track (
 CREATE TABLE tx_djdb_domain_model_genre (
   name tinytext
 );
+
+#
+# Table structure for table 'tx_djdb_domain_model_download'
+#
+CREATE TABLE tx_djdb_domain_model_download (
+  title tinytext,
+  target text
+);
+
