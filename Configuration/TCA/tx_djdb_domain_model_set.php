@@ -47,10 +47,10 @@ return call_user_func(function () {
                 'fe_group' => 'fe_group',
             ],
             'iconfile' => 'EXT:djdb/Resources/Public/Icons/Set.svg',
-            'searchFields' => 'title,bodytext',
+            'searchFields' => 'title,release,label,catno,description',
         ],
         'interface' => [
-            'showRecordFieldList' => 'hidden,title',
+            'showRecordFieldList' => 'hidden,title,release,label,catno',
         ],
         'columns' => [
             'hidden' => [

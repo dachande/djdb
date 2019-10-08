@@ -48,10 +48,10 @@ return call_user_func(function () {
                 'fe_group' => 'fe_group',
             ],
             'iconfile' => 'EXT:djdb/Resources/Public/Icons/Track.svg',
-            'searchFields' => 'title,bodytext',
+            'searchFields' => 'track_title,track_artist,release_title,release_artist,description',
         ],
         'interface' => [
-            'showRecordFieldList' => 'hidden,title',
+            'showRecordFieldList' => 'hidden,track_title,track_artist',
         ],
         'columns' => [
             'hidden' => [
