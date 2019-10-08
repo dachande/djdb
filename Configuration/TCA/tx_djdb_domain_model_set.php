@@ -191,12 +191,129 @@ return call_user_func(function () {
             ],
 
             'title' => [
-                'exclude' => true,
+                'exclude' => false,
                 'label' => $ll . 'field.title',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
                     'eval' => 'trim,required',
+                ],
+            ],
+            'release' => [
+                'exclude' => true,
+                'label' => $ll . 'field.release',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
+                ],
+            ],
+            'label' => [
+                'exclude' => true,
+                'label' => $ll . 'field.label',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
+                ],
+            ],
+            'catno' => [
+                'exclude' => true,
+                'label' => $ll . 'field.catno',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
+                ],
+            ],
+            'cover' => [
+                'exclude' => true,
+                'label' => $ll . 'field.cover',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                    'cover',
+                    [
+                        'minitems' => 0,
+                        'maxitems' => 1,
+                        'appearance' => [
+                            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                            'fileUploadAllowed' => false,
+                        ],
+                        'foreign_types' => [
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                        ],
+                    ],
+                    'jpeg,jpg,png'
+                ),
+            ],
+            'release_date' => [
+                'exclude' => true,
+                'label' => $ll . 'field.release_date',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'renderType' => 'inputDateTime',
+                    'eval' => 'datetime,int',
+                    'default' => 0,
+                ],
+            ],
+            'description' => [
+                'exclude' => true,
+                'label' => $ll . 'field.description',
+                'l10n_mode' => 'prefixLangTitle',
+                'l10n_cat' => 'text',
+                'config' => [
+                    'type' => 'text',
+                    'cols' => '80',
+                    'rows' => '15',
+                    'softref' => 'typolink_tag,images,email[subst],url',
+                    'enableRichtext' => true,
+                    'richtextConfiguration' => 'default',
                 ],
             ],
         ],
@@ -205,6 +322,13 @@ return call_user_func(function () {
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         title,
+                        release,
+                        label,
+                        catno,
+                        release_date,
+                        description,
+                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
+                        cover,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
