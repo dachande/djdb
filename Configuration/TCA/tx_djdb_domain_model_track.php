@@ -8,7 +8,8 @@ return call_user_func(function () {
     $tx_djdb_domain_model_track = [
         'ctrl' => [
             'title' => $ll . 'title',
-            'label' => 'title',
+            'label' => 'track_title',
+            'label_userFunc' => \Dachande\Djdb\Utility\TCAUtility::class . '->getTrackLabel',
             'hideAtCopy' => true,
             'tstamp' => 'tstamp',
             'crdate' => 'crdate',
@@ -190,22 +191,161 @@ return call_user_func(function () {
                 ],
             ],
 
-            'title' => [
-                'exclude' => true,
-                'label' => $ll . 'field.title',
+            'track_title' => [
+                'exclude' => false,
+                'label' => $ll . 'field.track_title',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
                     'eval' => 'trim,required',
                 ],
             ],
-            'artist' => [
-                'exclude' => true,
-                'label' => $ll . 'field.artist',
+            'track_artist' => [
+                'exclude' => false,
+                'label' => $ll . 'field.track_artist',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
                     'eval' => 'trim,required',
+                ],
+            ],
+            'release_title' => [
+                'exclude' => false,
+                'label' => $ll . 'field.release_title',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
+                ],
+            ],
+            'release_artist' => [
+                'exclude' => false,
+                'label' => $ll . 'field.release_artist',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
+                ],
+            ],
+            'cover' => [
+                'exclude' => true,
+                'label' => $ll . 'field.cover',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                    'cover',
+                    [
+                        'minitems' => 0,
+                        'maxitems' => 1,
+                        'appearance' => [
+                            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                            'fileUploadAllowed' => false,
+                        ],
+                        'foreign_types' => [
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                        ],
+                    ],
+                    'jpeg,jpg,png'
+                ),
+            ],
+            'release_date' => [
+                'exclude' => true,
+                'label' => $ll . 'field.release_date',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'renderType' => 'inputDateTime',
+                    'eval' => 'datetime,int',
+                    'default' => 0,
+                ],
+            ],
+            'description' => [
+                'exclude' => true,
+                'label' => $ll . 'field.description',
+                'l10n_mode' => 'prefixLangTitle',
+                'l10n_cat' => 'text',
+                'config' => [
+                    'type' => 'text',
+                    'cols' => '80',
+                    'rows' => '15',
+                    'softref' => 'typolink_tag,images,email[subst],url',
+                    'enableRichtext' => true,
+                    'richtextConfiguration' => 'default',
+                ],
+            ],
+            'link' => [
+                'exclude' => false,
+                'label' => $ll . 'field.link',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'renderType' => 'inputLink',
+                    'size' => 50,
+                    'eval' => 'trim',
+                    'fieldControl' => [
+                        'linkPopup' => [
+                            'options' => [
+                                'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel',
+                            ],
+                        ],
+                    ],
+                    'softref' => 'typolink',
+                ],
+            ],
+            'set_position' => [
+                'exclude' => false,
+                'label' => $ll . 'field.set_position',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
                 ],
             ],
         ],
@@ -213,8 +353,16 @@ return call_user_func(function () {
             '1' => [
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                        title,
-                        artist,
+                        track_title,
+                        track_artist,
+                        release_title,
+                        release_artist,
+                        release_date,
+                        description,
+                        link,
+                        set_position,
+                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
+                        cover,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,

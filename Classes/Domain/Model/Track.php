@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Model;
 
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
 
 class Track extends AbstractDomainObject
@@ -10,50 +12,274 @@ class Track extends AbstractDomainObject
     /**
      * @var string
      */
-    protected $title = '';
+    protected $trackTitle = '';
 
     /**
      * @var string
      */
-    protected $artist = '';
+    protected $trackArtist = '';
 
     /**
-     * Get the value of title
+     * @var string
+     */
+    protected $releaseTitle = '';
+
+    /**
+     * @var string
+     */
+    protected $releaseArtist = '';
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    protected $cover = null;
+
+    /**
+     * @var int
+     */
+    protected $releaseDate = 0;
+
+    /**
+     * @var string
+     */
+    protected $description = '';
+
+    /**
+     * @var string
+     */
+    protected $link = '';
+
+    /**
+     * @var string
+     */
+    protected $setPosition = '00:00:00';
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->initializeObjectStorages();
+    }
+
+    /**
+     * Initialize object storages
+     *
+     * @return void
+     */
+    protected function initializeObjectStorages()
+    {
+        $this->cover = new ObjectStorage;
+    }
+
+    /**
+     * Get the value of trackTitle
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTrackTitle(): string
     {
-        return $this->title;
+        return $this->trackTitle;
     }
 
     /**
-     * Set the value of title
+     * Set the value of trackTitle
      *
-     * @param string $title
+     * @param string $trackTitle
      */
-    public function setTitle(string $title)
+    public function setTrackTitle(string $trackTitle)
     {
-        $this->title = $title;
+        $this->trackTitle = $trackTitle;
     }
 
     /**
-     * Get the value of artist
+     * Get the value of trackArtist
      *
      * @return string
      */
-    public function getArtist(): string
+    public function getTrackArtist(): string
     {
-        return $this->artist;
+        return $this->trackArtist;
     }
 
     /**
-     * Set the value of artist
+     * Set the value of trackArtist
      *
-     * @param string $artist
+     * @param string $trackArtist
      */
-    public function setArtist(string $artist)
+    public function setTrackArtist(string $trackArtist)
     {
-        $this->artist = $artist;
+        $this->trackArtist = $trackArtist;
+    }
+
+    /**
+     * Get the value of releaseTitle
+     *
+     * @return string
+     */
+    public function getReleaseTitle(): string
+    {
+        return $this->releaseTitle;
+    }
+
+    /**
+     * Set the value of releaseTitle
+     *
+     * @param string $releaseTitle
+     * @return void
+     */
+    public function setReleaseTitle(string $releaseTitle)
+    {
+        $this->releaseTitle = $releaseTitle;
+    }
+
+    /**
+     * Get the value of releaseArtist
+     *
+     * @return string
+     */
+    public function getReleaseArtist(): string
+    {
+        return $this->releaseArtist;
+    }
+
+    /**
+     * Set the value of releaseArtist
+     *
+     * @param string $releaseArtist
+     * @return void
+     */
+    public function setReleaseArtist(string $releaseArtist)
+    {
+        $this->releaseArtist = $releaseArtist;
+    }
+
+    /**
+     * Get the value of cover
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    public function getCover(): ObjectStorage
+    {
+        return $this->cover;
+    }
+
+    /**
+     * Set the value of cover
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $cover
+     * @return void
+     */
+    public function setCover(ObjectStorage $cover)
+    {
+        $this->cover = $cover;
+
+        return $this;
+    }
+
+    /**
+     * Add cover
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $cover
+     * @return void
+     */
+    public function addCover(FileReference $cover)
+    {
+        $this->cover->attach($cover);
+    }
+
+    /**
+     * Remove cover
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $cover
+     * @return void
+     */
+    public function removeCover(FileReference $cover)
+    {
+        $this->cover->detach($cover);
+    }
+
+    /**
+     * Get the value of releaseDate
+     *
+     * @return int
+     */
+    public function getReleaseDate()
+    {
+        return $this->releaseDate;
+    }
+
+    /**
+     * Set the value of releaseDate
+     *
+     * @param int $releaseDate
+     * @return void
+     */
+    public function setReleaseDate(int $releaseDate)
+    {
+        $this->releaseDate = $releaseDate;
+    }
+
+    /**
+     * Get the value of description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set the value of description
+     *
+     * @param string $description
+     * @return void
+     */
+    public function setDescription(string $description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * Get the value of link
+     *
+     * @return string
+     */
+    public function getLink(): string
+    {
+        return $this->link;
+    }
+
+    /**
+     * Set the value of link
+     *
+     * @param string $link
+     * @return void
+     */
+    public function setLink(string $link)
+    {
+        $this->link = $link;
+    }
+
+    /**
+     * Get the value of setPosition
+     *
+     * @return string
+     */
+    public function getSetPosition(): string
+    {
+        return $this->setPosition;
+    }
+
+    /**
+     * Set the value of setPosition
+     *
+     * @param string $setPosition
+     * @return void
+     */
+    public function setSetPosition(string $setPosition)
+    {
+        $this->setPosition = $setPosition;
     }
 }
