@@ -1,0 +1,15 @@
+plugin {
+    tx_djdb {
+        view {
+            # cat=plugin.tx_djdb/file; type=string; label=Path to template root (FE)
+            templateRootPath = EXT:djdb/Resources/Private/Template
+            # cat=plugin.tx_djdb/file; type=string; label=Path to template partials (FE)
+            partialRootPath = EXT:djdb/Resources/Private/Partials
+            # cat=plugin.tx_djdb/file; type=string; label=Path to template layouts (FE)
+            layoutRootPath = EXT:djdb/Resources/Private/Layouts
+        }
+
+        settings {
+        }
+    }
+}
