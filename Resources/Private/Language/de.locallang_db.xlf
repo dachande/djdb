@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T11:22:08Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T11:32:02Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
@@ -82,6 +82,10 @@
 			<trans-unit id="tx_djdb_domain_model_track.field.discogs_id" approved="yes">
 				<source><![CDATA[Discogs Release ID]]></source>
 				<target><![CDATA[Discogs Release ID]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.genres" approved="yes">
+				<source><![CDATA[Genres]]></source>
+				<target><![CDATA[Genres]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.release_artist" approved="yes">
 				<source><![CDATA[Release artist]]></source>

@@ -63,6 +63,9 @@
 			<trans-unit id="tx_djdb_domain_model_track.field.set_position">
 				<source><![CDATA[Track position in Set]]></source>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.genres">
+				<source><![CDATA[Genres]]></source>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_download.title">
 				<source><![CDATA[Download]]></source>
 			</trans-unit>

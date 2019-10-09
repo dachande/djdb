@@ -24,6 +24,7 @@ namespace Dachande\Djdb\Domain\Model;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use Dachande\Djdb\Domain\Model\Genre;
 
 class Track extends AbstractDomainObject
 {
@@ -73,6 +74,11 @@ class Track extends AbstractDomainObject
     protected $setPosition = '00:00:00';
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
+     */
+    protected $genres = null;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -88,6 +94,7 @@ class Track extends AbstractDomainObject
     protected function initializeObjectStorages()
     {
         $this->cover = new ObjectStorage;
+        $this->genres = new ObjectStorage;
     }
 
     /**
@@ -299,5 +306,50 @@ class Track extends AbstractDomainObject
     public function setSetPosition(string $setPosition)
     {
         $this->setPosition = $setPosition;
+    }
+
+    /**
+     * Get the value of genres
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
+     */
+    public function getGenres(): ObjectStorage
+    {
+        return $this->genres;
+    }
+
+    /**
+     * Set the value of genres
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre> $genres
+     * @return void
+     */
+    public function setGenres(ObjectStorage $genres)
+    {
+        $this->genres = $genres;
+
+        return $this;
+    }
+
+    /**
+     * Add genre
+     *
+     * @param \Dachande\Djdb\Domain\Model\Genre $genre
+     * @return void
+     */
+    public function addGenre(Genre $genre)
+    {
+        $this->genres->attach($genre);
+    }
+
+    /**
+     * Remove genre
+     *
+     * @param \Dachande\Djdb\Domain\Model\Genre $genre
+     * @return void
+     */
+    public function removeGenre(Genre $genre)
+    {
+        $this->genres->detach($genre);
     }
 }
