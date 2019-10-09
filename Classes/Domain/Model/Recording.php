@@ -59,7 +59,7 @@ class Recording extends AbstractDomainObject
     protected function initializeObjectStorages()
     {
         $this->downloads = new ObjectStorage;
-        $this->tracks = new Track;
+        $this->tracks = new ObjectStorage;
     }
 
     /**
