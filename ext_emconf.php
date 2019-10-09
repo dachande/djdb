@@ -20,7 +20,7 @@
 
 $EM_CONF['djdb'] = [
     'title' => 'DJ Set database extension for TYPO3',
-    'description' => '',
+    'description' => 'DJ Set database extension for TYPO3',
     'version' => '0.1.0',
     'state' => 'alpha',
     'category' => 'plugin',
