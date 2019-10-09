@@ -2,7 +2,7 @@
 	"name": "dachande/djdb",
 	"description": "DJ Set database extension for TYPO3",
 	"type": "typo3-cms-extension",
-	"license": "GPL-2.0-or-later",
+	"license": ["GPL-2.0-or-later"],
 	"authors": [
 		{
 			"name": "Daniel Schultheis",
