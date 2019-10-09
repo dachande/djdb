@@ -211,8 +211,6 @@ return call_user_func(function () {
             'name' => [
                 'exclude' => false,
                 'label' => $ll . 'field.name',
-                'l10n_mode' => 'exclude',
-                'l10n_display' => 'defaultAsReadonly',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
