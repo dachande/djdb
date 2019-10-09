@@ -360,15 +360,12 @@ return call_user_func(function () {
             '1' => [
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                        track_title,
-                        track_artist,
-                        release_title,
-                        release_artist,
-                        release_date,
+                        --palette--;;track,
+                        --palette--;;release,
                         description,
                         discogs_id,
                         set_position,
-                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
+                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         cover,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
@@ -379,6 +376,22 @@ return call_user_func(function () {
             ],
         ],
         'palettes' => [
+            'track' => [
+                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.track',
+                'showitem' => '
+                    track_title,
+                    track_artist,
+                ',
+            ],
+            'release' => [
+                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.release',
+                'showitem' => '
+                    release_title,
+                    release_artist,
+                    --linebreak--,
+                    release_date,
+                ',
+            ],
             'hidden' => [
                 'showitem' => '
                     hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:field.default.hidden
