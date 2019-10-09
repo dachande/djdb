@@ -6,6 +6,18 @@
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="tx_djdb_sets.title">
+				<source><![CDATA[DJDB: Sets Display]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_sets.description">
+				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_tracks.title">
+				<source><![CDATA[DJDB: Tracks Display]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_tracks.description">
+				<source><![CDATA[This plugin is used to show an audio track overview page or a detail page containing details for a single audio track.]]></source>
+			</trans-unit>
 			<trans-unit id="palette.track">
 				<source><![CDATA[Track details]]></source>
 			</trans-unit>

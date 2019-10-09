@@ -1,0 +1,26 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+    elements {
+        djdb_sets {
+            iconIdentifier = tx-djdb-sets
+            title = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_sets.title
+            description = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_sets.description
+            tt_content_defValues {
+                CType = list
+                list_type = djdb_sets
+            }
+        }
+
+        djdb_tracks {
+            iconIdentifier = tx-djdb-tracks
+            title = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.title
+            description = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.description
+            tt_content_defValues {
+                CType = list
+                list_type = djdb_tracks
+            }
+        }
+    }
+
+    show := addToList(djdb_sets)
+    show := addToList(djdb_tracks)
+}

@@ -21,42 +21,17 @@
 defined('TYPO3_MODE') or die();
 
 call_user_func(function () {
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Reizwerk.Referenzen',
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+        'Dachande.Djdb',
         'Sets',
-        [
-            'Set' => 'list,show',
-        ],
-        [
-        ]
+        'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_sets.title',
+        'tx-djdb-sets'
     );
 
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Reizwerk.Referenzen',
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+        'Dachande.Djdb',
         'Tracks',
-        [
-            'Track' => 'list,show',
-        ],
-        [
-        ]
+        'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.title',
+        'tx-djdb-tracks'
     );
-
-    // Add custom icons
-    $icons = [
-        [
-            'tx-djdb-sets',
-            'EXT:djdb/Resources/Public/Icons/Set.svg'
-        ],
-        [
-            'tx-djdb-tracks',
-            'EXT:djdb/Resources/Public/Icons/Track.svg'
-        ],
-    ];
-
-    \Dachande\Djdb\Utility\IconUtility::registerIcons($icons);
-
-    // Add page TSconfig
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
-        <INCLUDE_TYPOSCRIPT: source="DIR:EXT:djdb/Configuration/PageTSconfig/" extensions="tsconfig">
-    ');
 });

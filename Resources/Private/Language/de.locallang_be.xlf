@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T13:39:00Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T15:29:28Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
@@ -30,6 +30,22 @@
 			<trans-unit id="tabs.content" approved="yes">
 				<source><![CDATA[Content]]></source>
 				<target><![CDATA[Inhalt]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_sets.description" approved="yes">
+				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>
+				<target><![CDATA[Dieses Plugin stellt eine Übersichtsseite mit DJ Sets oder eine DJ Set Detailseite dar.]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_sets.title" approved="yes">
+				<source><![CDATA[DJDB: Sets Display]]></source>
+				<target><![CDATA[DJDB: Sets Anzeige]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_tracks.description" approved="yes">
+				<source><![CDATA[This plugin is used to show an audio track overview page or a detail page containing details for a single audio track.]]></source>
+				<target><![CDATA[Dieses Plugin stellt eine Übersichtsseite mit Audio Tracks oder eine Audio Track Detailseite dar.]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_tracks.title" approved="yes">
+				<source><![CDATA[DJDB: Tracks Display]]></source>
+				<target><![CDATA[DJDB: Tracks Anzeige]]></target>
 			</trans-unit>
 		</body>
 	</file>
