@@ -30,6 +30,9 @@
 			<trans-unit id="tx_djdb_domain_model_set.field.description">
 				<source><![CDATA[Description]]></source>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.genres">
+				<source><![CDATA[Genres]]></source>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.title">
 				<source><![CDATA[Track]]></source>
 			</trans-unit>

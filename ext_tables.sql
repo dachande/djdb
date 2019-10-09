@@ -6,7 +6,7 @@ CREATE TABLE tx_djdb_domain_model_set (
   release tinytext,
   label tinytext,
   catno tinytext,
-  -- genre int(11) unsigned DEFAULT '0' NOT NULL,
+  genres int(11) unsigned DEFAULT '0' NOT NULL,
   cover int(11) unsigned DEFAULT '0' NOT NULL,
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
@@ -57,16 +57,16 @@ CREATE TABLE tx_djdb_domain_model_download (
 #
 # Table structure for table 'tx_djdb_domain_model_set_genre_mm'
 #
--- CREATE TABLE tx_djdb_domain_model_set_genre_mm (
---   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
---   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+CREATE TABLE tx_djdb_domain_model_set_genre_mm (
+  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 
---   sorting int(11) unsigned DEFAULT '0' NOT NULL,
---   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+  sorting int(11) unsigned DEFAULT '0' NOT NULL,
+  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 
---   KEY uid_local (uid_local),
---   KEY uid_foreign (uid_foreign)
--- );
+  KEY uid_local (uid_local),
+  KEY uid_foreign (uid_foreign)
+);
 
 #
 # Table structure for table 'tx_djdb_domain_model_set_recording_mm'

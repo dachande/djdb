@@ -335,12 +335,29 @@ return call_user_func(function () {
                     'richtextConfiguration' => 'default',
                 ],
             ],
+            'genres' => [
+                'exclude' => true,
+                'label' => $ll . 'field.genres',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectMultipleSideBySide',
+                    'size' => 5,
+                    'minitems' => 0,
+                    'maxitems' => 100,
+                    'foreign_table' => 'tx_djdb_domain_model_genre',
+                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
+                    'MM' => 'tx_djdb_domain_model_set_genre_mm',
+                ],
+            ],
         ],
         'types' => [
             '1' => [
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         title,
+                        genres,
                         release,
                         label,
                         catno,

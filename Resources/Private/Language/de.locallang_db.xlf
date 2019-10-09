@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T08:51:32Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T11:22:08Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
-			<trans-unit id="tx_djdb_domain_model_recording.field.name" approved="yes">
-				<source><![CDATA[Name]]></source>
-				<target><![CDATA[Name]]></target>
-			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_recording.title" approved="yes">
-				<source><![CDATA[Recording]]></source>
-				<target><![CDATA[Aufnahme]]></target>
-			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_download.field.target" approved="yes">
 				<source><![CDATA[Download target]]></source>
 				<target><![CDATA[Download Ziel]]></target>
@@ -35,6 +27,14 @@
 				<source><![CDATA[Genre]]></source>
 				<target><![CDATA[Genre]]></target>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_recording.field.name" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Name]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_recording.title" approved="yes">
+				<source><![CDATA[Recording]]></source>
+				<target><![CDATA[Aufnahme]]></target>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.catno" approved="yes">
 				<source><![CDATA[Catalogue No.]]></source>
 				<target><![CDATA[Katalog Nr.]]></target>
@@ -46,6 +46,10 @@
 			<trans-unit id="tx_djdb_domain_model_set.field.description" approved="yes">
 				<source><![CDATA[Description]]></source>
 				<target><![CDATA[Beschreibung]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.genres" approved="yes">
+				<source><![CDATA[Genres]]></source>
+				<target><![CDATA[Genres]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.label" approved="yes">
 				<source><![CDATA[Name of Label]]></source>
