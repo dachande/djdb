@@ -15,6 +15,15 @@ CREATE TABLE tx_djdb_domain_model_set (
 );
 
 #
+# Table structure for table 'tx_djdb_domain_model_disc'
+#
+CREATE TABLE tx_djdb_domain_model_disc (
+  name tinytext,
+  -- download int(11) unsigned DEFAULT '0' NOT NULL
+  -- track int(11) unsigned DEFAULT '0' NOT NULL
+);
+
+#
 # Table structure for table 'tx_djdb_domain_model_track'
 #
 CREATE TABLE tx_djdb_domain_model_track (
