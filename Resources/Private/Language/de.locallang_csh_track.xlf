@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T09:36:33Z">
+		<header>
+			<authorName>Daniel Schultheis</authorName>
+			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id=".description" approved="yes">
+				<source><![CDATA[Audio track record]]></source>
+				<target><![CDATA[Audio Track Datensatz]]></target>
+			</trans-unit>
+			<trans-unit id=".details" approved="yes">
+				<source><![CDATA[An audio track record contains details about a specific audio track from a specific release.&lt;br&gt;It can be used as a standalone record or as part of a recording. If it is used as a standalone record one or more download records can be attached if you want your visitors to be able to download the audio track.]]></source>
+				<target><![CDATA[Ein Audio Track Datensatz enthält Details über einen bestimmten Audio Track eines bestimmten Releases. Ein Audio Track kann entweder selbstständig oder als Bestandteil einer Aufnahme bestehen. Falls der Audio Track selbstständig verwendet wird, können diesem ein oder mehrere Downloads angehängt werden, um den Besuchern eine Download Option für den Audio Track anzubieten.]]></target>
+			</trans-unit>
+			<trans-unit id="discogs_id.description" approved="yes">
+				<source><![CDATA[Enter a release id from discogs if you want to add a link to the Discogs release page.]]></source>
+				<target><![CDATA[Gebe hier eine Release ID von Discogs ein, wenn Du den Audio Track mit der Release Seite auf Discogs verlinken möchtest.]]></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

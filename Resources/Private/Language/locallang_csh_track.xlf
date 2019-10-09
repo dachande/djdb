@@ -7,6 +7,15 @@
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id=".description">
+				<source><![CDATA[Audio track record]]></source>
+			</trans-unit>
+			<trans-unit id=".details">
+				<source><![CDATA[An audio track record contains details about a specific audio track from a specific release.&lt;br&gt;It can be used as a standalone record or as part of a recording. If it is used as a standalone record one or more download records can be attached if you want your visitors to be able to download the audio track.]]></source>
+			</trans-unit>
+			<trans-unit id="discogs_id.description">
+				<source><![CDATA[Enter a release id from discogs if you want to add a link to the Discogs release page.]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
