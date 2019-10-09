@@ -11,13 +11,13 @@ CREATE TABLE tx_djdb_domain_model_set (
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
   -- download int(11) unsigned DEFAULT '0' NOT NULL,
-  -- disc int(11) unsigned DEFAULT '0' NOT NULL
+  -- recording int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #
-# Table structure for table 'tx_djdb_domain_model_disc'
+# Table structure for table 'tx_djdb_domain_model_recording'
 #
-CREATE TABLE tx_djdb_domain_model_disc (
+CREATE TABLE tx_djdb_domain_model_recording (
   name tinytext,
   -- download int(11) unsigned DEFAULT '0' NOT NULL
   -- track int(11) unsigned DEFAULT '0' NOT NULL

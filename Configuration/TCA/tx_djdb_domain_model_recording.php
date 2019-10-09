@@ -21,9 +21,9 @@
 defined('TYPO3_MODE') or die();
 
 return call_user_func(function () {
-    $ll = 'LLL:EXT:djdb/Resources/Private/Language/locallang_db.xlf:tx_djdb_domain_model_disc.';
+    $ll = 'LLL:EXT:djdb/Resources/Private/Language/locallang_db.xlf:tx_djdb_domain_model_recording.';
 
-    $tx_djdb_domain_model_disc = [
+    $tx_djdb_domain_model_recording = [
         'ctrl' => [
             'title' => $ll . 'title',
             'label' => 'name',
@@ -46,7 +46,7 @@ return call_user_func(function () {
                 'endtime' => 'endtime',
                 'fe_group' => 'fe_group',
             ],
-            'iconfile' => 'EXT:djdb/Resources/Public/Icons/Disc.svg',
+            'iconfile' => 'EXT:djdb/Resources/Public/Icons/Recording.svg',
             'searchFields' => 'name',
         ],
         'interface' => [
@@ -153,8 +153,8 @@ return call_user_func(function () {
                             0,
                         ],
                     ],
-                    'foreign_table' => 'tx_djdb_domain_model_disc',
-                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_disc}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_disc}.{#sys_language_uid} IN (-1,0)',
+                    'foreign_table' => 'tx_djdb_domain_model_recording',
+                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_recording}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_recording}.{#sys_language_uid} IN (-1,0)',
                     'default' => 0,
                 ],
             ],
@@ -258,5 +258,5 @@ return call_user_func(function () {
         ],
     ];
 
-    return $tx_djdb_domain_model_disc;
+    return $tx_djdb_domain_model_recording;
 });

@@ -19,10 +19,35 @@ declare(strict_types=1);
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-namespace Dachande\Djdb\Domain\Repository;
+namespace Dachande\Djdb\Domain\Model;
 
-use TYPO3\CMS\Extbase\Persistence\Repository;
+use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
 
-class DiscRepository extends Repository
+class Recording extends AbstractDomainObject
 {
+    /**
+     * @var string
+     */
+    protected $name = '';
+
+    /**
+     * Get the value of name
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set the value of name
+     *
+     * @param string $name
+     * @return void
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
 }
