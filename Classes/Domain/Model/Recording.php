@@ -21,7 +21,9 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Model;
 
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use Dachande\Djdb\Domain\Model\Download;
 
 class Recording extends AbstractDomainObject
 {
@@ -29,6 +31,29 @@ class Recording extends AbstractDomainObject
      * @var string
      */
     protected $name = '';
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
+     */
+    protected $downloads;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->initializeObjectStorages();
+    }
+
+    /**
+     * Initialize object storages
+     *
+     * @return void
+     */
+    protected function initializeObjectStorages()
+    {
+        $this->downloads = new ObjectStorage;
+    }
 
     /**
      * Get the value of name
@@ -49,5 +74,50 @@ class Recording extends AbstractDomainObject
     public function setName(string $name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * Get the value of downloads
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
+     */
+    public function getDownloads(): ObjectStorage
+    {
+        return $this->downloads;
+    }
+
+    /**
+     * Set the value of downloads
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download> $downloads
+     * @return void
+     */
+    public function setDownloads(ObjectStorage $downloads)
+    {
+        $this->downloads = $downloads;
+
+        return $this;
+    }
+
+    /**
+     * Add download
+     *
+     * @param \Dachande\Djdb\Domain\Model\Download $download
+     * @return void
+     */
+    public function addDownload(Download $download)
+    {
+        $this->downloads->attach($download);
+    }
+
+    /**
+     * Remove download
+     *
+     * @param \Dachande\Djdb\Domain\Model\Download $download
+     * @return void
+     */
+    public function removeDownload(Download $download)
+    {
+        $this->downloads->detach($download);
     }
 }

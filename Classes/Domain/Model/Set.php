@@ -67,6 +67,7 @@ class Set extends AbstractDomainObject
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
      */
     protected $genres = null;
+
     /**
      * Constructor
      */

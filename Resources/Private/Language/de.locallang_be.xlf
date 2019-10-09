@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T09:11:54Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T12:33:12Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="label.add_download" approved="yes">
+				<source><![CDATA[Add download option]]></source>
+				<target><![CDATA[Download Option hinzufügen]]></target>
+			</trans-unit>
 			<trans-unit id="palette.release" approved="yes">
 				<source><![CDATA[Release details]]></source>
 				<target><![CDATA[Release Details]]></target>
