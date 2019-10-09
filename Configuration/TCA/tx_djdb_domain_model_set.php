@@ -351,6 +351,34 @@ return call_user_func(function () {
                     'MM' => 'tx_djdb_domain_model_set_genre_mm',
                 ],
             ],
+            'recordings' => [
+                'exclude' => true,
+                'label' => $ll . 'field.recordings',
+                'config' => [
+                    'type' => 'inline',
+                    'allowed' => 'tx_djdb_domain_model_recording',
+                    'foreign_table' => 'tx_djdb_domain_model_recording',
+                    'foreign_sortby' => 'sorting',
+                    'foreign_field' => 'set',
+                    'size' => 5,
+                    'minitems' => 0,
+                    'maxitems' => 100,
+                    'appearance' => [
+                        'collapseAll' => true,
+                        'expandSingle' => true,
+                        'newRecordLinkTitle' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:label.add_recording',
+                        'levelLinksPosition' => 'bottom',
+                        'useSortable' => true,
+                        'showPossibleLocalizationRecords' => true,
+                        'showRemovedLocalizationRecords' => true,
+                        'showAllLocalizationLink' => true,
+                        'showSynchronizationLink' => true,
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
         ],
         'types' => [
             '1' => [
@@ -365,6 +393,8 @@ return call_user_func(function () {
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         cover,
+                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.content,
+                        recordings,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,

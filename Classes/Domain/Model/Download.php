@@ -21,7 +21,6 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Model;
 
-use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
 
 class Download extends AbstractDomainObject

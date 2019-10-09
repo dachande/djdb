@@ -10,7 +10,7 @@ CREATE TABLE tx_djdb_domain_model_set (
   cover int(11) unsigned DEFAULT '0' NOT NULL,
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
-  -- recording int(11) unsigned DEFAULT '0' NOT NULL
+  recordings int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #
@@ -19,7 +19,8 @@ CREATE TABLE tx_djdb_domain_model_set (
 CREATE TABLE tx_djdb_domain_model_recording (
   name tinytext,
   downloads int(11) unsigned DEFAULT '0' NOT NULL,
-  -- track int(11) unsigned DEFAULT '0' NOT NULL
+  set int(11) unsigned DEFAULT '0' NOT NULL,
+  tracks int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #
@@ -36,7 +37,8 @@ CREATE TABLE tx_djdb_domain_model_track (
   description text,
   discogs_id tinytext,
   set_position tinytext,
-  downloads int(11) unsigned DEFAULT '0' NOT NULL
+  downloads int(11) unsigned DEFAULT '0' NOT NULL,
+  recording int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #
@@ -71,20 +73,6 @@ CREATE TABLE tx_djdb_domain_model_set_genre_mm (
 );
 
 #
-# Table structure for table 'tx_djdb_domain_model_set_recording_mm'
-#
--- CREATE TABLE tx_djdb_domain_model_set_recording_mm (
---   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
---   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-
---   sorting int(11) unsigned DEFAULT '0' NOT NULL,
---   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-
---   KEY uid_local (uid_local),
---   KEY uid_foreign (uid_foreign)
--- );
-
-#
 # Table structure for table 'tx_djdb_domain_model_track_genre_mm'
 #
 CREATE TABLE tx_djdb_domain_model_track_genre_mm (
@@ -97,17 +85,3 @@ CREATE TABLE tx_djdb_domain_model_track_genre_mm (
   KEY uid_local (uid_local),
   KEY uid_foreign (uid_foreign)
 );
-
-#
-# Table structure for table 'tx_djdb_domain_model_recording_track_mm'
-#
--- CREATE TABLE tx_djdb_domain_model_recording_track_mm (
---   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
---   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-
---   sorting int(11) unsigned DEFAULT '0' NOT NULL,
---   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-
---   KEY uid_local (uid_local),
---   KEY uid_foreign (uid_foreign)
--- );

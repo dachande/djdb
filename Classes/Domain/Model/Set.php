@@ -24,6 +24,7 @@ namespace Dachande\Djdb\Domain\Model;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use Dachande\Djdb\Domain\Model\Recording;
 use Dachande\Djdb\Domain\Model\Genre;
 
 class Set extends AbstractDomainObject
@@ -69,6 +70,11 @@ class Set extends AbstractDomainObject
     protected $genres = null;
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Recording>
+     */
+    protected $recordings = null;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -85,6 +91,7 @@ class Set extends AbstractDomainObject
     {
         $this->cover = new ObjectStorage;
         $this->genres = new ObjectStorage;
+        $this->recordings = new ObjectStorage;
     }
 
     /**
@@ -301,5 +308,50 @@ class Set extends AbstractDomainObject
     public function removeGenre(Genre $genre)
     {
         $this->genres->detach($genre);
+    }
+
+    /**
+     * Get the value of recordings
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Recording>
+     */
+    public function getRecordings(): ObjectStorage
+    {
+        return $this->recordings;
+    }
+
+    /**
+     * Set the value of recordings
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Recording> $recordings
+     * @return void
+     */
+    public function setRecordings(ObjectStorage $recordings)
+    {
+        $this->recordings = $recordings;
+
+        return $this;
+    }
+
+    /**
+     * Add recording
+     *
+     * @param \Dachande\Djdb\Domain\Model\Recording $recording
+     * @return void
+     */
+    public function addRecording(Recording $recording)
+    {
+        $this->recordings->attach($recording);
+    }
+
+    /**
+     * Remove recording
+     *
+     * @param \Dachande\Djdb\Domain\Model\Recording $recording
+     * @return void
+     */
+    public function removeRecording(Recording $recording)
+    {
+        $this->recordings->detach($recording);
     }
 }

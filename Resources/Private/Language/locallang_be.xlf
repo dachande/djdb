@@ -15,6 +15,15 @@
 			<trans-unit id="label.add_download">
 				<source><![CDATA[Add download option]]></source>
 			</trans-unit>
+			<trans-unit id="label.add_recording">
+				<source><![CDATA[Add recording]]></source>
+			</trans-unit>
+			<trans-unit id="label.add_track">
+				<source><![CDATA[Add track]]></source>
+			</trans-unit>
+			<trans-unit id="tabs.content">
+				<source><![CDATA[Content]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

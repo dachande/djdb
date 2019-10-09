@@ -23,6 +23,7 @@ namespace Dachande\Djdb\Domain\Model;
 
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use Dachande\Djdb\Domain\Model\Track;
 use Dachande\Djdb\Domain\Model\Download;
 
 class Recording extends AbstractDomainObject
@@ -36,6 +37,11 @@ class Recording extends AbstractDomainObject
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
      */
     protected $downloads;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Track>
+     */
+    protected $tracks;
 
     /**
      * Constructor
@@ -53,6 +59,7 @@ class Recording extends AbstractDomainObject
     protected function initializeObjectStorages()
     {
         $this->downloads = new ObjectStorage;
+        $this->tracks = new Track;
     }
 
     /**
@@ -119,5 +126,50 @@ class Recording extends AbstractDomainObject
     public function removeDownload(Download $download)
     {
         $this->downloads->detach($download);
+    }
+
+    /**
+     * Get the value of tracks
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Track>
+     */
+    public function getTracks(): ObjectStorage
+    {
+        return $this->tracks;
+    }
+
+    /**
+     * Set the value of tracks
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Track> $tracks
+     * @return void
+     */
+    public function setTracks(ObjectStorage $tracks)
+    {
+        $this->tracks = $tracks;
+
+        return $this;
+    }
+
+    /**
+     * Add track
+     *
+     * @param \Dachande\Djdb\Domain\Model\Track $track
+     * @return void
+     */
+    public function addTrack(Track $track)
+    {
+        $this->tracks->attach($track);
+    }
+
+    /**
+     * Remove track
+     *
+     * @param \Dachande\Djdb\Domain\Model\Track $track
+     * @return void
+     */
+    public function removeTrack(Track $track)
+    {
+        $this->tracks->detach($track);
     }
 }

@@ -248,6 +248,34 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'tracks' => [
+                'exclude' => true,
+                'label' => $ll . 'field.tracks',
+                'config' => [
+                    'type' => 'inline',
+                    'allowed' => 'tx_djdb_domain_model_track',
+                    'foreign_table' => 'tx_djdb_domain_model_track',
+                    'foreign_sortby' => 'sorting',
+                    'foreign_field' => 'recording',
+                    'size' => 5,
+                    'minitems' => 0,
+                    'maxitems' => 100,
+                    'appearance' => [
+                        'collapseAll' => true,
+                        'expandSingle' => true,
+                        'newRecordLinkTitle' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:label.add_track',
+                        'levelLinksPosition' => 'bottom',
+                        'useSortable' => true,
+                        'showPossibleLocalizationRecords' => true,
+                        'showRemovedLocalizationRecords' => true,
+                        'showAllLocalizationLink' => true,
+                        'showSynchronizationLink' => true,
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
         ],
         'types' => [
             '1' => [
@@ -256,6 +284,8 @@ return call_user_func(function () {
                         name,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         downloads,
+                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.content,
+                        tracks,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,

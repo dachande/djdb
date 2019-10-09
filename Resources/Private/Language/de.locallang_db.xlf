@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T12:43:15Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T13:39:10Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
@@ -27,13 +27,17 @@
 				<source><![CDATA[Genre]]></source>
 				<target><![CDATA[Genre]]></target>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_recording.field.downloads" approved="yes">
+				<source><![CDATA[Downloads]]></source>
+				<target><![CDATA[Downloads]]></target>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_recording.field.name" approved="yes">
 				<source><![CDATA[Name]]></source>
 				<target><![CDATA[Name]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_recording.field.downloads" approved="yes">
-				<source><![CDATA[Downloads]]></source>
-				<target><![CDATA[Downloads]]></target>
+			<trans-unit id="tx_djdb_domain_model_recording.field.tracks" approved="yes">
+				<source><![CDATA[Tracks]]></source>
+				<target><![CDATA[Tracks]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_recording.title" approved="yes">
 				<source><![CDATA[Recording]]></source>
@@ -58,6 +62,10 @@
 			<trans-unit id="tx_djdb_domain_model_set.field.label" approved="yes">
 				<source><![CDATA[Name of Label]]></source>
 				<target><![CDATA[Name des Labels]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.recordings" approved="yes">
+				<source><![CDATA[Recordings]]></source>
+				<target><![CDATA[Aufnahmen]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.release" approved="yes">
 				<source><![CDATA[Name of Release]]></source>

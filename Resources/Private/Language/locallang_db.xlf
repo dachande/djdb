@@ -33,6 +33,9 @@
 			<trans-unit id="tx_djdb_domain_model_set.field.genres">
 				<source><![CDATA[Genres]]></source>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.recordings">
+				<source><![CDATA[Recordings]]></source>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.title">
 				<source><![CDATA[Track]]></source>
 			</trans-unit>
@@ -92,6 +95,9 @@
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_recording.field.downloads">
 				<source><![CDATA[Downloads]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_recording.field.tracks">
+				<source><![CDATA[Tracks]]></source>
 			</trans-unit>
 		</body>
 	</file>
