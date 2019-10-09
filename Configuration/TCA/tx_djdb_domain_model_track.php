@@ -338,8 +338,6 @@ return call_user_func(function () {
             'link' => [
                 'exclude' => false,
                 'label' => $ll . 'field.link',
-                'l10n_mode' => 'exclude',
-                'l10n_display' => 'defaultAsReadonly',
                 'config' => [
                     'type' => 'input',
                     'renderType' => 'inputLink',
@@ -353,6 +351,9 @@ return call_user_func(function () {
                         ],
                     ],
                     'softref' => 'typolink',
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
                 ],
             ],
             'set_position' => [

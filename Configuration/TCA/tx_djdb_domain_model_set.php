@@ -211,12 +211,13 @@ return call_user_func(function () {
             'title' => [
                 'exclude' => false,
                 'label' => $ll . 'field.title',
-                'l10n_mode' => 'exclude',
-                'l10n_display' => 'defaultAsReadonly',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
                     'eval' => 'trim,required',
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
                 ],
             ],
             'release' => [
