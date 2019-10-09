@@ -34,7 +34,7 @@ CREATE TABLE tx_djdb_domain_model_track (
   cover int(11) unsigned DEFAULT '0' NOT NULL,
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
-  link tinytext,
+  discogs_id tinytext,
   -- download int(11) unsigned DEFAULT '0' NOT NULL,
   set_position tinytext
 );
@@ -54,3 +54,58 @@ CREATE TABLE tx_djdb_domain_model_download (
   target text
 );
 
+#
+# Table structure for table 'tx_djdb_domain_model_set_genre_mm'
+#
+-- CREATE TABLE tx_djdb_domain_model_set_genre_mm (
+--   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+--   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   sorting int(11) unsigned DEFAULT '0' NOT NULL,
+--   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   KEY uid_local (uid_local),
+--   KEY uid_foreign (uid_foreign)
+-- );
+
+#
+# Table structure for table 'tx_djdb_domain_model_set_recording_mm'
+#
+-- CREATE TABLE tx_djdb_domain_model_set_recording_mm (
+--   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+--   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   sorting int(11) unsigned DEFAULT '0' NOT NULL,
+--   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   KEY uid_local (uid_local),
+--   KEY uid_foreign (uid_foreign)
+-- );
+
+#
+# Table structure for table 'tx_djdb_domain_model_set_download_mm'
+#
+-- CREATE TABLE tx_djdb_domain_model_set_download_mm (
+--   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+--   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   sorting int(11) unsigned DEFAULT '0' NOT NULL,
+--   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   KEY uid_local (uid_local),
+--   KEY uid_foreign (uid_foreign)
+-- );
+
+#
+# Table structure for table 'tx_djdb_domain_model_recording_track_mm'
+#
+-- CREATE TABLE tx_djdb_domain_model_recording_track_mm (
+--   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+--   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   sorting int(11) unsigned DEFAULT '0' NOT NULL,
+--   sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+--   KEY uid_local (uid_local),
+--   KEY uid_foreign (uid_foreign)
+-- );

@@ -232,7 +232,7 @@ return call_user_func(function () {
                 ],
             ],
             'release_title' => [
-                'exclude' => false,
+                'exclude' => true,
                 'label' => $ll . 'field.release_title',
                 'l10n_mode' => 'exclude',
                 'l10n_display' => 'defaultAsReadonly',
@@ -243,7 +243,7 @@ return call_user_func(function () {
                 ],
             ],
             'release_artist' => [
-                'exclude' => false,
+                'exclude' => true,
                 'label' => $ll . 'field.release_artist',
                 'l10n_mode' => 'exclude',
                 'l10n_display' => 'defaultAsReadonly',
@@ -335,29 +335,17 @@ return call_user_func(function () {
                     'richtextConfiguration' => 'default',
                 ],
             ],
-            'link' => [
-                'exclude' => false,
-                'label' => $ll . 'field.link',
+            'discogs_id' => [
+                'exclude' => true,
+                'label' => $ll . 'field.discogs_id',
                 'config' => [
                     'type' => 'input',
-                    'renderType' => 'inputLink',
                     'size' => 50,
                     'eval' => 'trim',
-                    'fieldControl' => [
-                        'linkPopup' => [
-                            'options' => [
-                                'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel',
-                            ],
-                        ],
-                    ],
-                    'softref' => 'typolink',
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true,
-                    ],
                 ],
             ],
             'set_position' => [
-                'exclude' => false,
+                'exclude' => true,
                 'label' => $ll . 'field.set_position',
                 'l10n_mode' => 'exclude',
                 'l10n_display' => 'defaultAsReadonly',
@@ -378,7 +366,7 @@ return call_user_func(function () {
                         release_artist,
                         release_date,
                         description,
-                        link,
+                        discogs_id,
                         set_position,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
                         cover,
