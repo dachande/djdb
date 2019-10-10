@@ -22,7 +22,7 @@ defined('TYPO3_MODE') or die();
 
 call_user_func(function () {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Reizwerk.Referenzen',
+        'Dachande.Djdb',
         'Sets',
         [
             'Set' => 'list,show',
@@ -32,7 +32,7 @@ call_user_func(function () {
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Reizwerk.Referenzen',
+        'Dachande.Djdb',
         'Tracks',
         [
             'Track' => 'list,show',
