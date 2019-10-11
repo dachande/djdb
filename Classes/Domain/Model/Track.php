@@ -66,7 +66,7 @@ class Track extends AbstractDomainObject
     /**
      * @var string
      */
-    protected $link = '';
+    protected $discogsId = '';
 
     /**
      * @var string
@@ -273,24 +273,24 @@ class Track extends AbstractDomainObject
     }
 
     /**
-     * Get the value of link
+     * Get the value of discogsId
      *
      * @return string
      */
-    public function getLink(): string
+    public function getDiscogsId(): string
     {
-        return $this->link;
+        return $this->discogsId;
     }
 
     /**
-     * Set the value of link
+     * Set the value of discogsId
      *
-     * @param string $link
+     * @param string $discogsId
      * @return void
      */
-    public function setLink(string $link)
+    public function setDiscogsId(string $discogsId)
     {
-        $this->link = $link;
+        $this->discogsId = $discogsId;
     }
 
     /**
