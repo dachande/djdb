@@ -22,14 +22,53 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use Dachande\Djdb\Domain\Repository\SetRepository;
+use Dachande\Djdb\Domain\Model\Set;
 
 class SetController extends ActionController
 {
-    public function listAction()
+    /**
+     * @var \Dachande\Djdb\Domain\Repository\SetRepository
+     */
+    protected $setRepository;
+
+    /**
+     * Inject a set repository
+     *
+     * @return void
+     *
+     * @param \Dachande\Djdb\Domain\Repository\SetRepository $setRepository
+     * @return void
+     */
+    public function injectSetRepository(SetRepository $setRepository)
     {
+        $this->setRepository = $setRepository;
     }
 
-    public function showAction()
+    /**
+     * Output a list view of sets
+     *
+     * @return void
+     */
+    public function listAction()
     {
+        $sets = $this->setRepository->findAll();
+
+        $this->view->assignMultiple([
+            'sets' => $sets,
+        ]);
+    }
+
+    /**
+     * Single view of a set record
+     *
+     * @param \Dachande\Djdb\Domain\Model\Set|null $set
+     * @return void
+     */
+    public function showAction(Set $set = null)
+    {
+        $this->view->assignMultiple([
+            'set' => $set,
+        ]);
     }
 }
