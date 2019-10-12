@@ -84,6 +84,11 @@ class Track extends AbstractDomainObject
     protected $downloads;
 
     /**
+     * @var bool
+     */
+    protected $featured = false;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -402,5 +407,26 @@ class Track extends AbstractDomainObject
     public function removeDownload(Download $download)
     {
         $this->downloads->detach($download);
+    }
+
+    /**
+     * Get the value of featured
+     *
+     * @return bool
+     */
+    public function getFeatured(): bool
+    {
+        return $this->featured;
+    }
+
+    /**
+     * Set the value of featured
+     *
+     * @param bool $featured
+     * @return void
+     */
+    public function setFeatured(bool $featured)
+    {
+        $this->featured = $featured;
     }
 }

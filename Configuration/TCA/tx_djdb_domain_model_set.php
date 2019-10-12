@@ -379,6 +379,20 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'featured' => [
+                'exclude' => true,
+                'label' => $ll . 'field.featured',
+                'config' => [
+                    'type' => 'check',
+                    'renderType' => 'checkboxToggle',
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                ],
+            ],
         ],
         'types' => [
             '1' => [
@@ -390,6 +404,7 @@ return call_user_func(function () {
                         label,
                         catno,
                         release_date,
+                        featured,
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         cover,

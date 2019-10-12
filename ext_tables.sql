@@ -10,7 +10,8 @@ CREATE TABLE tx_djdb_domain_model_set (
   cover int(11) unsigned DEFAULT '0' NOT NULL,
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
-  recordings int(11) unsigned DEFAULT '0' NOT NULL
+  recordings int(11) unsigned DEFAULT '0' NOT NULL,
+  featured int(1) unsigned DEFAULT '0' NOT NULL
 );
 
 #
@@ -38,7 +39,8 @@ CREATE TABLE tx_djdb_domain_model_track (
   discogs_id tinytext,
   set_position tinytext,
   downloads int(11) unsigned DEFAULT '0' NOT NULL,
-  recording int(11) unsigned DEFAULT '0' NOT NULL
+  recording int(11) unsigned DEFAULT '0' NOT NULL,
+  featured int(1) unsigned DEFAULT '0' NOT NULL
 );
 
 #

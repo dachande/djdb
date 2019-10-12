@@ -399,6 +399,20 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'featured' => [
+                'exclude' => true,
+                'label' => $ll . 'field.featured',
+                'config' => [
+                    'type' => 'check',
+                    'renderType' => 'checkboxToggle',
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                ],
+            ],
         ],
         'types' => [
             '1' => [
@@ -407,6 +421,7 @@ return call_user_func(function () {
                         --palette--;;track,
                         --palette--;;release,
                         genres,
+                        featured,
                         description,
                         discogs_id,
                         set_position,

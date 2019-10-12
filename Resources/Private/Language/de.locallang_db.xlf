@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T13:39:10Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-12T19:22:58Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
@@ -55,6 +55,10 @@
 				<source><![CDATA[Description]]></source>
 				<target><![CDATA[Beschreibung]]></target>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.featured" approved="yes">
+				<source><![CDATA[Featured]]></source>
+				<target><![CDATA[Hervorgehoben]]></target>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.genres" approved="yes">
 				<source><![CDATA[Genres]]></source>
 				<target><![CDATA[Genres]]></target>
@@ -98,6 +102,10 @@
 			<trans-unit id="tx_djdb_domain_model_track.field.downloads" approved="yes">
 				<source><![CDATA[Downloads]]></source>
 				<target><![CDATA[Downloads]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.featured" approved="yes">
+				<source><![CDATA[Featured]]></source>
+				<target><![CDATA[Hervorgehoben]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.genres" approved="yes">
 				<source><![CDATA[Genres]]></source>

@@ -75,6 +75,11 @@ class Set extends AbstractDomainObject
     protected $recordings = null;
 
     /**
+     * @var bool
+     */
+    protected $featured = false;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -353,5 +358,26 @@ class Set extends AbstractDomainObject
     public function removeRecording(Recording $recording)
     {
         $this->recordings->detach($recording);
+    }
+
+    /**
+     * Get the value of featured
+     *
+     * @return bool
+     */
+    public function getFeatured(): bool
+    {
+        return $this->featured;
+    }
+
+    /**
+     * Set the value of featured
+     *
+     * @param bool $featured
+     * @return void
+     */
+    public function setFeatured(bool $featured)
+    {
+        $this->featured = $featured;
     }
 }
