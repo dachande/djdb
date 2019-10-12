@@ -22,14 +22,53 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use Dachande\Djdb\Domain\Repository\TrackRepository;
+use Dachande\Djdb\Domain\Model\Track;
 
 class TrackController extends ActionController
 {
-    public function listAction()
+    /**
+     * @var \Dachande\Djdb\Domain\Repository\TrackRepository
+     */
+    protected $trackRepository;
+
+    /**
+     * Inject a track repository
+     *
+     * @return void
+     *
+     * @param \Dachande\Djdb\Domain\Repository\TrackRepository $trackRepository
+     * @return void
+     */
+    public function injectTrackRepository(TrackRepository $trackRepository)
     {
+        $this->trackRepository = $trackRepository;
     }
 
-    public function showAction()
+    /**
+     * Output a list view of tracks
+     *
+     * @return void
+     */
+    public function listAction()
     {
+        $tracks = $this->trackRepository->findAll();
+
+        $this->view->assignMultiple([
+            'tracks' => $tracks,
+        ]);
+    }
+
+    /**
+     * Single view of a track record
+     *
+     * @param \Dachande\Djdb\Domain\Model\Track|null $track
+     * @return void
+     */
+    public function showAction(Track $track = null)
+    {
+        $this->view->assignMultiple([
+            'track' => $track,
+        ]);
     }
 }
