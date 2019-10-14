@@ -27,7 +27,7 @@ return call_user_func(function () {
         'ctrl' => [
             'title' => $ll . 'title',
             'label' => 'track_title',
-            'label_userFunc' => \Dachande\Djdb\Utility\TCAUtility::class . '->getTrackLabel',
+            'label_userFunc' => \Dachande\Djdb\Utility\TcaUtility::class . '->getTrackLabel',
             'hideAtCopy' => true,
             'tstamp' => 'tstamp',
             'crdate' => 'crdate',

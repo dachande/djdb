@@ -23,7 +23,7 @@ namespace Dachande\Djdb\Utility;
 
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 
-class TCAUtility
+class TcaUtility
 {
     /**
      * Alter track label by combining track artist and track title
