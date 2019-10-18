@@ -26,4 +26,109 @@ use Dachande\Djdb\Domain\Model\DemandInterface;
 
 abstract class AbstractDemand extends AbstractDomainObject implements DemandInterface
 {
+    /**
+     * @var string
+     */
+    protected $order = '';
+
+    /**
+     * @var int
+     */
+    protected $limit = 0;
+
+    /**
+     * @var int
+     */
+    protected $offset = 0;
+
+    /**
+     * @var int
+     */
+    protected $storagePage = 0;
+
+    /**
+     * Get the value of order
+     *
+     * @return string
+     */
+    public function getOrder(): string
+    {
+        return $this->order;
+    }
+
+    /**
+     * Set the value of order
+     *
+     * @param string $order
+     * @return void
+     */
+    public function setOrder(string $order)
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * Get the value of limit
+     *
+     * @return int
+     */
+    public function getLimit(): int
+    {
+        return $this->limit;
+    }
+
+    /**
+     * Set the value of limit
+     *
+     * @param int $limit
+     * @return void
+     */
+    public function setLimit(int $limit)
+    {
+        $this->limit = $limit;
+    }
+
+    /**
+     * Get the value of offset
+     *
+     * @return int
+     */
+    public function getOffset(): int
+    {
+        return $this->offset;
+    }
+
+    /**
+     * Set the value of offset
+     *
+     * @param int $offset
+     * @return void
+     */
+    public function setOffset(int $offset)
+    {
+        $this->offset = $offset;
+    }
+
+    /**
+     * Get the value of storagePage
+     *
+     * @return int
+     */
+    public function getStoragePage(): int
+    {
+        return $this->storagePage;
+    }
+
+    /**
+     * Set the value of storagePage
+     *
+     * @param int $storagePage
+     * @return void
+     */
+    public function setStoragePage(int $storagePage)
+    {
+        $this->storagePage = $storagePage;
+
+        return $this;
+    }
 }
