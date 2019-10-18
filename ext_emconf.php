@@ -37,7 +37,7 @@ $EM_CONF['djdb'] = [
     'clearCacheOnLoad' => true,
     'autoload' => [
         'psr-4' => [
-            'Dachande\\Djdb\\' => 'Classes',
+            'Dachande\\Djdb\\' => 'Classes/',
         ],
     ],
 ];
