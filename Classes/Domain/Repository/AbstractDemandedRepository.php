@@ -21,6 +21,8 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Repository;
 
-class TrackRepository extends AbstractDemandedRepository
+use TYPO3\CMS\Extbase\Persistence\Repository;
+
+abstract class AbstractDemandedRepository extends Repository implements DemandedRepositoryInterface
 {
 }

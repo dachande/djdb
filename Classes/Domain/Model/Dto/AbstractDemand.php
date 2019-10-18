@@ -19,8 +19,11 @@ declare(strict_types=1);
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-namespace Dachande\Djdb\Domain\Repository;
+namespace Dachande\Djdb\Domain\Model\Dto;
 
-class TrackRepository extends AbstractDemandedRepository
+use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use Dachande\Djdb\Domain\Model\DemandInterface;
+
+abstract class AbstractDemand extends AbstractDomainObject implements DemandInterface
 {
 }

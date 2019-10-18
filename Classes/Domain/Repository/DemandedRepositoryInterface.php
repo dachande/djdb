@@ -21,6 +21,7 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Repository;
 
-class TrackRepository extends AbstractDemandedRepository
+
+interface DemandedRepositoryInterface
 {
 }

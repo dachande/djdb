@@ -19,8 +19,8 @@ declare(strict_types=1);
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-namespace Dachande\Djdb\Domain\Repository;
+namespace Dachande\Djdb\Domain\Model;
 
-class TrackRepository extends AbstractDemandedRepository
+interface DemandInterface
 {
 }
