@@ -21,9 +21,9 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Model;
 
-use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
-class Download extends AbstractDomainObject
+class Download extends AbstractEntity
 {
     /**
      * @var string

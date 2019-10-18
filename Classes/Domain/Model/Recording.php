@@ -22,11 +22,11 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Domain\Model;
 
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use Dachande\Djdb\Domain\Model\Track;
 use Dachande\Djdb\Domain\Model\Download;
 
-class Recording extends AbstractDomainObject
+class Recording extends AbstractEntity
 {
     /**
      * @var string

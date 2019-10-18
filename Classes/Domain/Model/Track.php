@@ -23,10 +23,10 @@ namespace Dachande\Djdb\Domain\Model;
 
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
-use TYPO3\CMS\Extbase\DomainObject\AbstractDomainObject;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use Dachande\Djdb\Domain\Model\Genre;
 
-class Track extends AbstractDomainObject
+class Track extends AbstractEntity
 {
     /**
      * @var string
