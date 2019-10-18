@@ -21,7 +21,30 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Repository;
 
+use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
+use Dachande\Djdb\Domain\Model\DemandInterface;
 
 interface DemandedRepositoryInterface
 {
+    /**
+     * Returns the objects of this repository matching the demand.
+     *
+     * @param \Dachande\Djdb\Domain\Model\DemandInterface $demand
+     * @param bool $respectEnableFields
+     * @param bool $disableLanguageOverlayMode
+     * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     */
+    public function findDemanded(
+        DemandInterface $demand,
+        bool $respectEnableFields = true,
+        bool $disableLanguageOverlayMode = false
+    ): QueryResultInterface;
+
+    /**
+     * Returns the total number objects of this repository matching the demand.
+     *
+     * @param \Dachande\Djdb\Domain\Model\DemandInterface $demand
+     * @return int
+     */
+    public function countDemanded(DemandInterface $demand): int;
 }
