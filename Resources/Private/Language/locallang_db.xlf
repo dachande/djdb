@@ -42,17 +42,11 @@
 			<trans-unit id="tx_djdb_domain_model_track.title">
 				<source><![CDATA[Track]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.track_title">
+			<trans-unit id="tx_djdb_domain_model_track.field.title">
 				<source><![CDATA[Title]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.track_artist">
+			<trans-unit id="tx_djdb_domain_model_track.field.artist">
 				<source><![CDATA[Artist]]></source>
-			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.release_title">
-				<source><![CDATA[Release title]]></source>
-			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.release_artist">
-				<source><![CDATA[Release artist]]></source>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.cover">
 				<source><![CDATA[Cover]]></source>
@@ -75,7 +69,43 @@
 			<trans-unit id="tx_djdb_domain_model_track.field.downloads">
 				<source><![CDATA[Downloads]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.featured">
+			<trans-unit id="tx_djdb_domain_model_track.field.is_new">
+				<source><![CDATA[New]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.is_featured">
+				<source><![CDATA[Featured]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.title">
+				<source><![CDATA[Release]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.title">
+				<source><![CDATA[Title]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.artist">
+				<source><![CDATA[Artist]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.cover">
+				<source><![CDATA[Cover]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.release_date">
+				<source><![CDATA[Release date]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.description">
+				<source><![CDATA[Description]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.discogs_id">
+				<source><![CDATA[Discogs Release ID]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.genres">
+				<source><![CDATA[Genres]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.downloads">
+				<source><![CDATA[Downloads]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.is_new">
+				<source><![CDATA[New]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_release.field.is_featured">
 				<source><![CDATA[Featured]]></source>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_download.title">

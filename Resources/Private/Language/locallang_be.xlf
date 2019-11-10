@@ -24,6 +24,9 @@
 			<trans-unit id="palette.release">
 				<source><![CDATA[Release details]]></source>
 			</trans-unit>
+			<trans-unit id="palette.properties">
+				<source><![CDATA[Properties]]></source>
+			</trans-unit>
 			<trans-unit id="label.add_download">
 				<source><![CDATA[Add download option]]></source>
 			</trans-unit>

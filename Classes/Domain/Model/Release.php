@@ -22,10 +22,11 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Domain\Model;
 
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use Dachande\Djdb\Domain\Model\Genre;
 
-class Track extends AbstractEntity
+class Release extends AbstractEntity
 {
     /**
      * @var string
@@ -38,6 +39,11 @@ class Track extends AbstractEntity
     protected $artist = '';
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    protected $cover = null;
+
+    /**
      * @var int
      */
     protected $releaseDate = 0;
@@ -46,6 +52,11 @@ class Track extends AbstractEntity
      * @var string
      */
     protected $description = '';
+
+    /**
+     * @var string
+     */
+    protected $discogsId = '';
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
@@ -82,6 +93,7 @@ class Track extends AbstractEntity
      */
     protected function initializeObjectStorages()
     {
+        $this->cover = new ObjectStorage;
         $this->genres = new ObjectStorage;
         $this->downloads = new ObjectStorage;
     }
@@ -100,6 +112,7 @@ class Track extends AbstractEntity
      * Set the value of title
      *
      * @param string $title
+     * @return void
      */
     public function setTitle(string $title)
     {
@@ -120,12 +133,57 @@ class Track extends AbstractEntity
      * Set the value of artist
      *
      * @param string $artist
+     * @return void
      */
     public function setArtist(string $artist)
     {
         $this->artist = $artist;
     }
 
+    /**
+     * Get the value of cover
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    public function getCover(): ObjectStorage
+    {
+        return $this->cover;
+    }
+
+    /**
+     * Set the value of cover
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $cover
+     * @return void
+     */
+    public function setCover(ObjectStorage $cover)
+    {
+        $this->cover = $cover;
+
+        return $this;
+    }
+
+    /**
+     * Add cover
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $cover
+     * @return void
+     */
+    public function addCover(FileReference $cover)
+    {
+        $this->cover->attach($cover);
+    }
+
+    /**
+     * Remove cover
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $cover
+     * @return void
+     */
+    public function removeCover(FileReference $cover)
+    {
+        $this->cover->detach($cover);
+    }
 
     /**
      * Get the value of releaseDate
@@ -167,6 +225,27 @@ class Track extends AbstractEntity
     public function setDescription(string $description)
     {
         $this->description = $description;
+    }
+
+    /**
+     * Get the value of discogsId
+     *
+     * @return string
+     */
+    public function getDiscogsId(): string
+    {
+        return $this->discogsId;
+    }
+
+    /**
+     * Set the value of discogsId
+     *
+     * @param string $discogsId
+     * @return void
+     */
+    public function setDiscogsId(string $discogsId)
+    {
+        $this->discogsId = $discogsId;
     }
 
     /**

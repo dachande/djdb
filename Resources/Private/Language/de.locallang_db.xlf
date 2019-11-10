@@ -111,27 +111,19 @@
 				<source><![CDATA[Genres]]></source>
 				<target><![CDATA[Genres]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.release_artist" approved="yes">
-				<source><![CDATA[Release artist]]></source>
-				<target><![CDATA[Release Interpret]]></target>
-			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.release_date" approved="yes">
 				<source><![CDATA[Release date]]></source>
 				<target><![CDATA[Veröffentlichungsdatum]]></target>
-			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.release_title" approved="yes">
-				<source><![CDATA[Release title]]></source>
-				<target><![CDATA[Release Titel]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.set_position" approved="yes">
 				<source><![CDATA[Track position in Set]]></source>
 				<target><![CDATA[Trackposition im Set]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.track_artist" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_track.field.artist" approved="yes">
 				<source><![CDATA[Artist]]></source>
 				<target><![CDATA[Interpret]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.track_title" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_track.field.title" approved="yes">
 				<source><![CDATA[Title]]></source>
 				<target><![CDATA[Titel]]></target>
 			</trans-unit>

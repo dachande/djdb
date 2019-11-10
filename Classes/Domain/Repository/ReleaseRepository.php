@@ -19,22 +19,8 @@ declare(strict_types=1);
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-namespace Dachande\Djdb\Utility;
+namespace Dachande\Djdb\Domain\Repository;
 
-use TYPO3\CMS\Backend\Utility\BackendUtility;
-
-class TcaUtility
+class ReleaseRepository extends AbstractDemandedRepository
 {
-    /**
-     * Alter label by combining artist and title
-     *
-     * @param array $parameters
-     * @return void
-     */
-    public function getArtistTitleLabel(array &$parameters)
-    {
-        $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-
-        $parameters['title'] = $record['artist'] . ' - ' . $record['title'];
-    }
 }

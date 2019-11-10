@@ -21,9 +21,9 @@
 defined('TYPO3_MODE') or die();
 
 return call_user_func(function () {
-    $ll = 'LLL:EXT:djdb/Resources/Private/Language/locallang_db.xlf:tx_djdb_domain_model_track.';
+    $ll = 'LLL:EXT:djdb/Resources/Private/Language/locallang_db.xlf:tx_djdb_domain_model_release.';
 
-    $tx_djdb_domain_model_track = [
+    $tx_djdb_domain_model_release = [
         'ctrl' => [
             'title' => $ll . 'title',
             'label' => 'title',
@@ -47,11 +47,11 @@ return call_user_func(function () {
                 'endtime' => 'endtime',
                 'fe_group' => 'fe_group',
             ],
-            'iconfile' => 'EXT:djdb/Resources/Public/Icons/Track.svg',
+            'iconfile' => 'EXT:djdb/Resources/Public/Icons/Release.svg',
             'searchFields' => 'title,artist,description',
         ],
         'interface' => [
-            'showRecordFieldList' => 'hidden,title,artist',
+            'showRecordFieldList' => 'hidden,track_title,track_artist',
         ],
         'columns' => [
             'hidden' => [
@@ -154,8 +154,8 @@ return call_user_func(function () {
                             0,
                         ],
                     ],
-                    'foreign_table' => 'tx_djdb_domain_model_track',
-                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_track}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_track}.{#sys_language_uid} IN (-1,0)',
+                    'foreign_table' => 'tx_djdb_domain_model_release',
+                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_release}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_release}.{#sys_language_uid} IN (-1,0)',
                     'default' => 0,
                 ],
             ],
@@ -244,8 +244,64 @@ return call_user_func(function () {
                     'maxitems' => 100,
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
-                    'MM' => 'tx_djdb_domain_model_track_genre_mm',
+                    'MM' => 'tx_djdb_domain_model_release_genre_mm',
                 ],
+            ],
+            'cover' => [
+                'exclude' => true,
+                'label' => $ll . 'field.cover',
+                'l10n_mode' => 'exclude',
+                'l10n_display' => 'defaultAsReadonly',
+                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                    'cover',
+                    [
+                        'minitems' => 0,
+                        'maxitems' => 1,
+                        'appearance' => [
+                            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                            'fileUploadAllowed' => false,
+                        ],
+                        'foreign_types' => [
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                                'showitem' => '
+                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette
+                                ',
+                            ],
+                        ],
+                    ],
+                    'jpeg,jpg,png'
+                ),
             ],
             'release_date' => [
                 'exclude' => true,
@@ -273,6 +329,15 @@ return call_user_func(function () {
                     'richtextConfiguration' => 'default',
                 ],
             ],
+            'discogs_id' => [
+                'exclude' => true,
+                'label' => $ll . 'field.discogs_id',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 50,
+                    'eval' => 'trim',
+                ],
+            ],
             'downloads' => [
                 'exclude' => true,
                 'label' => $ll . 'field.downloads',
@@ -289,6 +354,34 @@ return call_user_func(function () {
                         'collapseAll' => true,
                         'expandSingle' => true,
                         'newRecordLinkTitle' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:label.add_download',
+                        'levelLinksPosition' => 'bottom',
+                        'useSortable' => true,
+                        'showPossibleLocalizationRecords' => true,
+                        'showRemovedLocalizationRecords' => true,
+                        'showAllLocalizationLink' => true,
+                        'showSynchronizationLink' => true,
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
+            'tracks' => [
+                'exclude' => true,
+                'label' => $ll . 'field.tracks',
+                'config' => [
+                    'type' => 'inline',
+                    'allowed' => 'tx_djdb_domain_model_track',
+                    'foreign_table' => 'tx_djdb_domain_model_track',
+                    'foreign_sortby' => 'sorting',
+                    'foreign_field' => 'release',
+                    'size' => 5,
+                    'minitems' => 0,
+                    'maxitems' => 100,
+                    'appearance' => [
+                        'collapseAll' => true,
+                        'expandSingle' => true,
+                        'newRecordLinkTitle' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:label.add_track',
                         'levelLinksPosition' => 'bottom',
                         'useSortable' => true,
                         'showPossibleLocalizationRecords' => true,
@@ -334,13 +427,17 @@ return call_user_func(function () {
             '1' => [
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                        --palette--;;track,
+                        --palette--;;release,
                         genres,
                         release_date,
                         --palette--;;properties,
                         description,
+                        discogs_id,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
+                        cover,
                         downloads,
+                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.content,
+                        tracks,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -350,8 +447,8 @@ return call_user_func(function () {
             ],
         ],
         'palettes' => [
-            'track' => [
-                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.track',
+            'release' => [
+                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.release',
                 'showitem' => '
                     title,
                     artist,
@@ -387,5 +484,5 @@ return call_user_func(function () {
         ],
     ];
 
-    return $tx_djdb_domain_model_track;
+    return $tx_djdb_domain_model_release;
 });

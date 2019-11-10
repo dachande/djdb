@@ -27,6 +27,10 @@
 				<source><![CDATA[Track details]]></source>
 				<target><![CDATA[Track Details]]></target>
 			</trans-unit>
+			<trans-unit id="palette.properties" approved="yes">
+				<source><![CDATA[Properties]]></source>
+				<target><![CDATA[Eigenschaften]]></target>
+			</trans-unit>
 			<trans-unit id="tabs.content" approved="yes">
 				<source><![CDATA[Content]]></source>
 				<target><![CDATA[Inhalt]]></target>
