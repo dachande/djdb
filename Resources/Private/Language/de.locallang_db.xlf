@@ -55,7 +55,11 @@
 				<source><![CDATA[Description]]></source>
 				<target><![CDATA[Beschreibung]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_set.field.featured" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_set.field.is_new" approved="yes">
+				<source><![CDATA[New]]></source>
+				<target><![CDATA[Neu]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.is_featured" approved="yes">
 				<source><![CDATA[Featured]]></source>
 				<target><![CDATA[Hervorgehoben]]></target>
 			</trans-unit>

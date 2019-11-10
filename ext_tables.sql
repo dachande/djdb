@@ -11,7 +11,8 @@ CREATE TABLE tx_djdb_domain_model_set (
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
   recordings int(11) unsigned DEFAULT '0' NOT NULL,
-  featured int(1) unsigned DEFAULT '0' NOT NULL
+  is_new int(1) unsigned DEFAULT '0' NOT NULL
+  is_featured int(1) unsigned DEFAULT '0' NOT NULL
 );
 
 #

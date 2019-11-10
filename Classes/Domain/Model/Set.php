@@ -77,7 +77,12 @@ class Set extends AbstractEntity
     /**
      * @var bool
      */
-    protected $featured = false;
+    protected $isNew = false;
+
+    /**
+     * @var bool
+     */
+    protected $isFeatured = false;
 
     /**
      * Constructor
@@ -361,23 +366,44 @@ class Set extends AbstractEntity
     }
 
     /**
-     * Get the value of featured
+     * Get the value of isNew
+     *
+     * @return bool
+     */
+    public function getNew(): bool
+    {
+        return $this->isNew;
+    }
+
+    /**
+     * Set the value of isNew
+     *
+     * @param bool $isNew
+     * @return void
+     */
+    public function setNew(bool $isNew)
+    {
+        $this->isNew = $isNew;
+    }
+
+    /**
+     * Get the value of isFeatured
      *
      * @return bool
      */
     public function getFeatured(): bool
     {
-        return $this->featured;
+        return $this->isFeatured;
     }
 
     /**
-     * Set the value of featured
+     * Set the value of isFeatured
      *
-     * @param bool $featured
+     * @param bool $isFeatured
      * @return void
      */
-    public function setFeatured(bool $featured)
+    public function setFeatured(bool $isFeatured)
     {
-        $this->featured = $featured;
+        $this->isFeatured = $isFeatured;
     }
 }

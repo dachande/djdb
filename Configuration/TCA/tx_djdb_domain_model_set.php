@@ -379,9 +379,23 @@ return call_user_func(function () {
                     ],
                 ],
             ],
-            'featured' => [
+            'is_new' => [
                 'exclude' => true,
-                'label' => $ll . 'field.featured',
+                'label' => $ll . 'field.is_new',
+                'config' => [
+                    'type' => 'check',
+                    'renderType' => 'checkboxToggle',
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                ],
+            ],
+            'is_featured' => [
+                'exclude' => true,
+                'label' => $ll . 'field.is_featured',
                 'config' => [
                     'type' => 'check',
                     'renderType' => 'checkboxToggle',
@@ -400,11 +414,11 @@ return call_user_func(function () {
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         title,
                         genres,
+                        --palette--;;properties,
                         release,
                         label,
                         catno,
                         release_date,
-                        featured,
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         cover,
@@ -419,6 +433,13 @@ return call_user_func(function () {
             ],
         ],
         'palettes' => [
+            'properties' => [
+                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.properties',
+                'showitem' => '
+                    is_new,
+                    is_featured,
+                ',
+            ],
             'hidden' => [
                 'showitem' => '
                     hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:field.default.hidden
