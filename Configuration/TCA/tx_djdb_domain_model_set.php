@@ -349,6 +349,14 @@ return call_user_func(function () {
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
                     'MM' => 'tx_djdb_set_genre_mm',
+                    'fieldControl' => [
+                        'addRecord' => [
+                            'disabled' => false,
+                        ],
+                        'editPopup' => [
+                            'disabled' => false,
+                        ],
+                    ],
                 ],
             ],
             'recordings' => [
