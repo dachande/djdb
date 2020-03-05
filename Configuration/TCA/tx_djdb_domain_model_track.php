@@ -35,7 +35,8 @@ return call_user_func(function () {
             'editlock' => 'editlock',
             'versioningWS' => true,
             'origUid' => 't3_origuid',
-            'sortby' => 'sorting',
+            'default_sortby' => 'artist,title',
+            // 'sortby' => 'sorting',
             'delete' => 'deleted',
             'transOrigPointerField' => 'l10n_parent',
             'transOrigDiffSourceField' => 'l10n_diffsource',
@@ -245,6 +246,7 @@ return call_user_func(function () {
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
                     'MM' => 'tx_djdb_track_genre_mm',
+
                 ],
             ],
             'release_date' => [
