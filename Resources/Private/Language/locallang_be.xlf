@@ -36,8 +36,11 @@
 			<trans-unit id="label.add_track">
 				<source><![CDATA[Add track]]></source>
 			</trans-unit>
-			<trans-unit id="tabs.content">
-				<source><![CDATA[Content]]></source>
+			<trans-unit id="tabs.tracklist">
+				<source><![CDATA[Tracklist]]></source>
+			</trans-unit>
+			<trans-unit id="tabs.relations">
+				<source><![CDATA[Relations]]></source>
 			</trans-unit>
 		</body>
 	</file>

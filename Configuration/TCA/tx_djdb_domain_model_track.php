@@ -244,7 +244,7 @@ return call_user_func(function () {
                     'maxitems' => 100,
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
-                    'MM' => 'tx_djdb_domain_model_track_genre_mm',
+                    'MM' => 'tx_djdb_track_genre_mm',
                 ],
             ],
             'release_date' => [
@@ -301,6 +301,63 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'releases' => [
+                'exclude' => true,
+                'label' => $ll . 'field.releases',
+                'config' => [
+                    'type' => 'group',
+                    'internal_type' => 'db',
+                    'allowed' => 'tx_djdb_domain_model_release',
+                    'foreign_table' => 'tx_djdb_domain_model_release',
+                    'MM' => 'tx_djdb_release_track_mm',
+                    'MM_opposite_field' => 'tracks',
+                    'MM_hasUidField' => true,
+                    'multiple' => true,
+                    'size' => 1,
+                    'minitems' => 0,
+                    'maxitems' => 1,
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                    'fieldControl' => [
+                        'addRecord' => [
+                            'disabled' => false,
+                        ],
+                        'editPopup' => [
+                            'disabled' => false,
+                        ],
+                    ],
+                ],
+            ],
+            'recordings' => [
+                'exclude' => true,
+                'label' => $ll . 'field.recordings',
+                'config' => [
+                    'type' => 'group',
+                    'internal_type' => 'db',
+                    // 'multiple' => true,
+                    'allowed' => 'tx_djdb_domain_model_recording',
+                    'foreign_table' => 'tx_djdb_domain_model_recording',
+                    'MM' => 'tx_djdb_recording_track_mm',
+                    'MM_opposite_field' => 'tracks',
+                    'MM_hasUidField' => true,
+                    'multiple' => true,
+                    'size' => 5,
+                    'minitems' => 0,
+                    'maxitems' => 100,
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                    'fieldControl' => [
+                        'addRecord' => [
+                            'disabled' => false,
+                        ],
+                        'editPopup' => [
+                            'disabled' => false,
+                        ],
+                    ],
+                ],
+            ],
             'is_new' => [
                 'exclude' => true,
                 'label' => $ll . 'field.is_new',
@@ -341,6 +398,8 @@ return call_user_func(function () {
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         downloads,
+                        releases,
+                        recordings,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,

@@ -31,9 +31,13 @@
 				<source><![CDATA[Properties]]></source>
 				<target><![CDATA[Eigenschaften]]></target>
 			</trans-unit>
-			<trans-unit id="tabs.content" approved="yes">
-				<source><![CDATA[Content]]></source>
-				<target><![CDATA[Inhalt]]></target>
+			<trans-unit id="tabs.tracklist" approved="yes">
+				<source><![CDATA[Tracklist]]></source>
+				<target><![CDATA[Track Liste]]></target>
+			</trans-unit>
+			<trans-unit id="tabs.relations">
+				<source><![CDATA[Relations]]></source>
+				<target><![CDATA[Relationen]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_sets.description" approved="yes">
 				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>

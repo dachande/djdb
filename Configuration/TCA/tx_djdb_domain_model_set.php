@@ -348,7 +348,7 @@ return call_user_func(function () {
                     'maxitems' => 100,
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
-                    'MM' => 'tx_djdb_domain_model_set_genre_mm',
+                    'MM' => 'tx_djdb_set_genre_mm',
                 ],
             ],
             'recordings' => [
@@ -422,7 +422,7 @@ return call_user_func(function () {
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         cover,
-                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.content,
+                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.relations,
                         recordings,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
