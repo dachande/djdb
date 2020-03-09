@@ -26,17 +26,9 @@ CREATE TABLE tx_djdb_domain_model_recording (
 );
 
 #
-# Table structure for table 'tx_djdb_domain_model_recordingtrack'
+# Table structure for table 'tx_djdb_domain_model_album'
 #
-CREATE TABLE tx_djdb_domain_model_recordingtrack (
-  set_position tinytext,
-  track int(11) unsigned DEFAULT '0' NOT NULL
-);
-
-#
-# Table structure for table 'tx_djdb_domain_model_release'
-#
-CREATE TABLE tx_djdb_domain_model_release (
+CREATE TABLE tx_djdb_domain_model_album (
   title tinytext,
   artist tinytext,
   genres int(11) unsigned DEFAULT '0' NOT NULL,
@@ -60,9 +52,8 @@ CREATE TABLE tx_djdb_domain_model_track (
   release_date int(11) unsigned DEFAULT '0' NOT NULL,
   description text,
   downloads int(11) unsigned DEFAULT '0' NOT NULL,
-  recordingtracks int(11) unsigned DEFAULT '0' NOT NULL,
   recordings int(11) unsigned DEFAULT '0' NOT NULL,
-  releases int(11) unsigned DEFAULT '0' NOT NULL,
+  albums int(11) unsigned DEFAULT '0' NOT NULL,
   is_new int(1) unsigned DEFAULT '0' NOT NULL,
   is_featured int(1) unsigned DEFAULT '0' NOT NULL
 );
@@ -81,7 +72,7 @@ CREATE TABLE tx_djdb_domain_model_download (
   title tinytext,
   target text,
   recording int(11) unsigned DEFAULT '0' NOT NULL,
-  release int(11) unsigned DEFAULT '0' NOT NULL,
+  album int(11) unsigned DEFAULT '0' NOT NULL,
   track int(11) unsigned DEFAULT '0' NOT NULL
 );
 
@@ -100,9 +91,9 @@ CREATE TABLE tx_djdb_set_genre_mm (
 );
 
 #
-# Table structure for table 'tx_djdb_release_genre_mm'
+# Table structure for table 'tx_djdb_album_genre_mm'
 #
-CREATE TABLE tx_djdb_release_genre_mm (
+CREATE TABLE tx_djdb_album_genre_mm (
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 
@@ -128,9 +119,9 @@ CREATE TABLE tx_djdb_track_genre_mm (
 );
 
 #
-# Table structure for table 'tx_djdb_release_track_mm'
+# Table structure for table 'tx_djdb_album_track_mm'
 #
-CREATE TABLE tx_djdb_release_track_mm (
+CREATE TABLE tx_djdb_album_track_mm (
   uid int(11) NOT NULL auto_increment,
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,

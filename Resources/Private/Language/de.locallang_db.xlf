@@ -43,53 +43,53 @@
 				<source><![CDATA[Recording]]></source>
 				<target><![CDATA[Aufnahme]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.artist" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.artist" approved="yes">
 				<source><![CDATA[Artist]]></source>
 				<target><![CDATA[Interpret]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.cover" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.cover" approved="yes">
 				<source><![CDATA[Cover]]></source>
 				<target><![CDATA[Cover]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.description" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.description" approved="yes">
 				<source><![CDATA[Description]]></source>
 				<target><![CDATA[Beschreibung]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.discogs_id" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.discogs_id" approved="yes">
 				<source><![CDATA[Discogs Release ID]]></source>
 				<target><![CDATA[Discogs Release ID]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.downloads" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.downloads" approved="yes">
 				<source><![CDATA[Downloads]]></source>
 				<target><![CDATA[Downloads]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.genres" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.genres" approved="yes">
 				<source><![CDATA[Genres]]></source>
 				<target><![CDATA[Genres]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.is_featured" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.is_featured" approved="yes">
 				<source><![CDATA[Featured]]></source>
 				<target><![CDATA[Hervorgehoben]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.is_new" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.is_new" approved="yes">
 				<source><![CDATA[New]]></source>
 				<target><![CDATA[Neu]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.release_date" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.release_date" approved="yes">
 				<source><![CDATA[Release date]]></source>
 				<target><![CDATA[Veröffentlichungsdatum]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.title" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.title" approved="yes">
 				<source><![CDATA[Title]]></source>
 				<target><![CDATA[Titel]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.tracks" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_album.field.tracks" approved="yes">
 				<source><![CDATA[Tracks]]></source>
 				<target><![CDATA[Tracks]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.title" approved="yes">
-				<source><![CDATA[Release]]></source>
-				<target><![CDATA[Release]]></target>
+			<trans-unit id="tx_djdb_domain_model_album.title" approved="yes">
+				<source><![CDATA[Album]]></source>
+				<target><![CDATA[Album]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.catno" approved="yes">
 				<source><![CDATA[Catalogue No.]]></source>
@@ -123,9 +123,9 @@
 				<source><![CDATA[Recordings]]></source>
 				<target><![CDATA[Aufnahmen]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_set.field.release" approved="yes">
-				<source><![CDATA[Name of Release]]></source>
-				<target><![CDATA[Name des Releases]]></target>
+			<trans-unit id="tx_djdb_domain_model_set.field.album" approved="yes">
+				<source><![CDATA[Name of Album]]></source>
+				<target><![CDATA[Name des Albums]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.release_date" approved="yes">
 				<source><![CDATA[Release date]]></source>
@@ -183,9 +183,9 @@
 				<source><![CDATA[Release date]]></source>
 				<target><![CDATA[Veröffentlichungsdatum]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.releases" approved="yes">
-				<source><![CDATA[Release]]></source>
-				<target><![CDATA[Release]]></target>
+			<trans-unit id="tx_djdb_domain_model_track.field.albums" approved="yes">
+				<source><![CDATA[Album]]></source>
+				<target><![CDATA[Album]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.set_position" approved="yes">
 				<source><![CDATA[Track position in Set]]></source>

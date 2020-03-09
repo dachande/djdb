@@ -12,8 +12,8 @@
 			<trans-unit id="tx_djdb_domain_model_set.field.title">
 				<source><![CDATA[Title]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_set.field.release">
-				<source><![CDATA[Name of Release]]></source>
+			<trans-unit id="tx_djdb_domain_model_set.field.album">
+				<source><![CDATA[Name of Album]]></source>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.label">
 				<source><![CDATA[Name of Label]]></source>
@@ -72,8 +72,8 @@
 			<trans-unit id="tx_djdb_domain_model_track.field.downloads">
 				<source><![CDATA[Downloads]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.releases">
-				<source><![CDATA[Release]]></source>
+			<trans-unit id="tx_djdb_domain_model_track.field.albums">
+				<source><![CDATA[Album]]></source>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.recordings">
 				<source><![CDATA[Recording]]></source>
@@ -84,40 +84,40 @@
 			<trans-unit id="tx_djdb_domain_model_track.field.is_featured">
 				<source><![CDATA[Featured]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.title">
-				<source><![CDATA[Release]]></source>
+			<trans-unit id="tx_djdb_domain_model_album.title">
+				<source><![CDATA[Album]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.title">
+			<trans-unit id="tx_djdb_domain_model_album.field.title">
 				<source><![CDATA[Title]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.artist">
+			<trans-unit id="tx_djdb_domain_model_album.field.artist">
 				<source><![CDATA[Artist]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.cover">
+			<trans-unit id="tx_djdb_domain_model_album.field.cover">
 				<source><![CDATA[Cover]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.release_date">
+			<trans-unit id="tx_djdb_domain_model_album.field.release_date">
 				<source><![CDATA[Release date]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.description">
+			<trans-unit id="tx_djdb_domain_model_album.field.description">
 				<source><![CDATA[Description]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.discogs_id">
+			<trans-unit id="tx_djdb_domain_model_album.field.discogs_id">
 				<source><![CDATA[Discogs Release ID]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.genres">
+			<trans-unit id="tx_djdb_domain_model_album.field.genres">
 				<source><![CDATA[Genres]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.downloads">
+			<trans-unit id="tx_djdb_domain_model_album.field.downloads">
 				<source><![CDATA[Downloads]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.tracks">
+			<trans-unit id="tx_djdb_domain_model_album.field.tracks">
 				<source><![CDATA[Tracks]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.is_new">
+			<trans-unit id="tx_djdb_domain_model_album.field.is_new">
 				<source><![CDATA[New]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_release.field.is_featured">
+			<trans-unit id="tx_djdb_domain_model_album.field.is_featured">
 				<source><![CDATA[Featured]]></source>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_download.title">

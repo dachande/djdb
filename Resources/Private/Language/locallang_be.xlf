@@ -21,8 +21,8 @@
 			<trans-unit id="palette.track">
 				<source><![CDATA[Track details]]></source>
 			</trans-unit>
-			<trans-unit id="palette.release">
-				<source><![CDATA[Release details]]></source>
+			<trans-unit id="palette.album">
+				<source><![CDATA[Album details]]></source>
 			</trans-unit>
 			<trans-unit id="palette.properties">
 				<source><![CDATA[Properties]]></source>

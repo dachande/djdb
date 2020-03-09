@@ -21,9 +21,9 @@
 defined('TYPO3_MODE') or die();
 
 return call_user_func(function () {
-    $ll = 'LLL:EXT:djdb/Resources/Private/Language/locallang_db.xlf:tx_djdb_domain_model_release.';
+    $ll = 'LLL:EXT:djdb/Resources/Private/Language/locallang_db.xlf:tx_djdb_domain_model_album.';
 
-    $tx_djdb_domain_model_release = [
+    $tx_djdb_domain_model_album = [
         'ctrl' => [
             'title' => $ll . 'title',
             'label' => 'title',
@@ -48,7 +48,7 @@ return call_user_func(function () {
                 'endtime' => 'endtime',
                 'fe_group' => 'fe_group',
             ],
-            'iconfile' => 'EXT:djdb/Resources/Public/Icons/Release.svg',
+            'iconfile' => 'EXT:djdb/Resources/Public/Icons/Album.svg',
             'searchFields' => 'title,artist,description',
         ],
         'interface' => [
@@ -155,8 +155,8 @@ return call_user_func(function () {
                             0,
                         ],
                     ],
-                    'foreign_table' => 'tx_djdb_domain_model_release',
-                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_release}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_release}.{#sys_language_uid} IN (-1,0)',
+                    'foreign_table' => 'tx_djdb_domain_model_album',
+                    'foreign_table_where' => 'AND {#tx_djdb_domain_model_album}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_album}.{#sys_language_uid} IN (-1,0)',
                     'default' => 0,
                 ],
             ],
@@ -245,7 +245,7 @@ return call_user_func(function () {
                     'maxitems' => 100,
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
-                    'MM' => 'tx_djdb_release_genre_mm',
+                    'MM' => 'tx_djdb_album_genre_mm',
                     'fieldControl' => [
                         'addRecord' => [
                             'disabled' => false,
@@ -383,7 +383,7 @@ return call_user_func(function () {
                     'internal_type' => 'db',
                     'allowed' => 'tx_djdb_domain_model_track',
                     'foreign_table' => 'tx_djdb_domain_model_track',
-                    'MM' => 'tx_djdb_release_track_mm',
+                    'MM' => 'tx_djdb_album_track_mm',
                     'MM_hasUidField' => true,
                     'multiple' => true,
                     'size' => 10,
@@ -435,7 +435,7 @@ return call_user_func(function () {
             '1' => [
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                        --palette--;;release,
+                        --palette--;;album,
                         genres,
                         release_date,
                         --palette--;;properties,
@@ -455,8 +455,8 @@ return call_user_func(function () {
             ],
         ],
         'palettes' => [
-            'release' => [
-                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.release',
+            'album' => [
+                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.album',
                 'showitem' => '
                     title,
                     artist,
@@ -492,5 +492,5 @@ return call_user_func(function () {
         ],
     ];
 
-    return $tx_djdb_domain_model_release;
+    return $tx_djdb_domain_model_album;
 });

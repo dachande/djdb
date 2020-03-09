@@ -19,9 +19,9 @@
 				<source><![CDATA[Add track]]></source>
 				<target><![CDATA[Track hinzufügen]]></target>
 			</trans-unit>
-			<trans-unit id="palette.release" approved="yes">
-				<source><![CDATA[Release details]]></source>
-				<target><![CDATA[Release Details]]></target>
+			<trans-unit id="palette.album" approved="yes">
+				<source><![CDATA[Album details]]></source>
+				<target><![CDATA[Album Details]]></target>
 			</trans-unit>
 			<trans-unit id="palette.track" approved="yes">
 				<source><![CDATA[Track details]]></source>

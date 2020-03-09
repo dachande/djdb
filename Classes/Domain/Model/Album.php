@@ -26,7 +26,7 @@ use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use Dachande\Djdb\Domain\Model\Genre;
 
-class Release extends AbstractEntity
+class Album extends AbstractEntity
 {
     /**
      * @var string

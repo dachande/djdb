@@ -37,7 +37,7 @@ class Set extends AbstractEntity
     /**
      * @var string
      */
-    protected $release = '';
+    protected $album = '';
 
     /**
      * @var string
@@ -126,24 +126,24 @@ class Set extends AbstractEntity
     }
 
     /**
-     * Get the value of release
+     * Get the value of album
      *
      * @return string
      */
-    public function getRelease(): string
+    public function getAlbum(): string
     {
-        return $this->release;
+        return $this->album;
     }
 
     /**
-     * Set the value of release
+     * Set the value of album
      *
-     * @param string $release
+     * @param string $album
      * @return void
      */
-    public function setRelease(string $release)
+    public function setAlbum(string $album)
     {
-        $this->release = $release;
+        $this->album = $album;
     }
 
     /**

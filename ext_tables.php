@@ -26,6 +26,7 @@ call_user_func(function () {
         'genre',
         'recording',
         'set',
+        'album',
         'track',
     ];
 
