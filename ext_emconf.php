@@ -30,6 +30,7 @@ $EM_CONF['djdb'] = [
         'depends' => [
             'php' => '7.2.0-0.0.0',
             'typo3' => '9.5.0-9.5.99',
+            'base_utilities' => '0.0.1-0.0.0'
         ],
         'conflicts' => [],
         'suggests' => [],

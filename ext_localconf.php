@@ -67,7 +67,7 @@ call_user_func(function () {
         ],
     ];
 
-    \Dachande\Djdb\Utility\IconUtility::registerIcons($icons);
+    \Dachande\BaseUtilities\Utility\IconUtility::registerIcons($icons);
 
     // Add page TSconfig
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
