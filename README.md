@@ -20,7 +20,7 @@ If used stand-alone the track can have a download relation if a download link fo
 
 #### Part of an album
 
-If used as part of an album the relation to the download model should not be set as the download relation is being managed through the release model instead.
+If used as part of an album the relation to the download model should not be set as the download relation is being managed through the album model instead.
 
 #### Part of a recording
 
@@ -28,7 +28,7 @@ If used as part of a recording the relation to the download model should not be 
 
 ### Set
 
-The set model represents a DJ sets which will most likely consist of multiple audio tracks mixed together by a DJ. Depending on the length of a DJ set it will be represented through one or more recordings (see below).
+The set model represents a DJ set which will most likely consist of multiple audio tracks mixed together by a DJ. Depending on the length of a DJ set it will be represented through one or more recordings (see below).
 
 ### Recording
 
@@ -65,7 +65,7 @@ A track can be related to the following models:
 * Recording
 
 One track can (but does not need to) be related to exactly one album or one or more recordings. \
-One recording and/or release can be related to (contain) one or more tracks.
+One recording and/or album can be related to (contain) one or more tracks.
 
 ### Download &rarr; Track / Album / Recording
 
