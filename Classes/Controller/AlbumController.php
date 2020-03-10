@@ -22,54 +22,54 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use Dachande\Djdb\Domain\Repository\TrackRepository;
-use Dachande\Djdb\Domain\Model\Track;
+use Dachande\Djdb\Domain\Repository\AlbumRepository;
+use Dachande\Djdb\Domain\Model\Album;
 
-class TrackController extends ActionController
+class SetController extends ActionController
 {
     /**
-     * @var \Dachande\Djdb\Domain\Repository\TrackRepository
+     * @var \Dachande\Djdb\Domain\Repository\AlbumRepository
      */
-    protected $trackRepository;
+    protected $albumRepository;
 
     /**
-     * Inject a track repository
+     * Inject a set repository
      *
      * @return void
      *
-     * @param \Dachande\Djdb\Domain\Repository\TrackRepository $trackRepository
+     * @param \Dachande\Djdb\Domain\Repository\AlbumRepository $albumRepository
      * @return void
      */
-    public function injectTrackRepository(TrackRepository $trackRepository)
+    public function injectAlbumRepository(AlbumRepository $albumRepository)
     {
-        $this->trackRepository = $trackRepository;
+        $this->albumRepository = $albumRepository;
     }
 
     /**
-     * Output a list view of tracks
+     * Output a list view of albums
      *
      * @return void
      */
     public function listAction()
     {
         // TODO: Use demand interface instead of using find method from repository
-        $tracks = $this->trackRepository->findAll();
+        $albums = $this->albumRepository->findAll();
 
         $this->view->assignMultiple([
-            'tracks' => $tracks,
+            'albums' => $albums,
         ]);
     }
 
     /**
-     * Single view of a track record
+     * Single view of a album record
      *
-     * @param \Dachande\Djdb\Domain\Model\Track|null $track
+     * @param \Dachande\Djdb\Domain\Model\Album|null $album
      * @return void
      */
-    public function detailAction(Track $track = null)
+    public function detailAction(Album $album = null)
     {
         $this->view->assignMultiple([
-            'track' => $track,
+            'album' => $album,
         ]);
     }
 }

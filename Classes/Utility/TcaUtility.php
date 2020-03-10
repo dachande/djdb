@@ -26,15 +26,22 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
 class TcaUtility
 {
     /**
-     * Alter track label by combining track artist and track title
+     * Alter label by combining artist and title
      *
      * @param array $parameters
      * @return void
      */
-    public function getTrackLabel(array &$parameters)
+    public function getArtistTitleLabel(array &$parameters)
     {
-        $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+        $parameters['title'] = $parameters['row']['artist'] . ' - ' . $parameters['row']['title'];
+    }
 
-        $parameters['title'] = $record['track_artist'] . ' - ' . $record['track_title'];
+    public function getRecordingLabel(array &$parameters)
+    {
+        $setRecord = BackendUtility::getRecord('tx_djdb_domain_model_set', $parameters['row']['set']);
+
+        $parameters['title'] = (!empty($setRecord))
+            ? $setRecord['title'] . ' - ' . $parameters['row']['name']
+            : $parameters['row']['name'];
     }
 }

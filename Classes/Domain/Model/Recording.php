@@ -34,6 +34,11 @@ class Recording extends AbstractEntity
     protected $name = '';
 
     /**
+     * @var int
+     */
+    protected $duration = 0;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
      */
     protected $downloads;
@@ -81,6 +86,27 @@ class Recording extends AbstractEntity
     public function setName(string $name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * Get the value of duration
+     *
+     * @return int
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set the value of duration
+     *
+     * @param int $duration
+     * @return void
+     */
+    public function setDuration(int $duration)
+    {
+        $this->duration = $duration;
     }
 
     /**

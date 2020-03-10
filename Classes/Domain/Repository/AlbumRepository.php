@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /**
  * Copyright (C) 2019  Daniel Schultheis
@@ -18,27 +19,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-defined('TYPO3_MODE') or die();
+namespace Dachande\Djdb\Domain\Repository;
 
-call_user_func(function () {
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'Dachande.Djdb',
-        'Sets',
-        'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_sets.title',
-        'tx-djdb-sets'
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'Dachande.Djdb',
-        'Albums',
-        'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_albums.title',
-        'tx-djdb-albums'
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'Dachande.Djdb',
-        'Tracks',
-        'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.title',
-        'tx-djdb-tracks'
-    );
-});
+class AlbumRepository extends AbstractDemandedRepository
+{
+}

@@ -21,8 +21,11 @@
 			<trans-unit id="palette.track">
 				<source><![CDATA[Track details]]></source>
 			</trans-unit>
-			<trans-unit id="palette.release">
-				<source><![CDATA[Release details]]></source>
+			<trans-unit id="palette.album">
+				<source><![CDATA[Album details]]></source>
+			</trans-unit>
+			<trans-unit id="palette.properties">
+				<source><![CDATA[Properties]]></source>
 			</trans-unit>
 			<trans-unit id="label.add_download">
 				<source><![CDATA[Add download option]]></source>
@@ -33,8 +36,11 @@
 			<trans-unit id="label.add_track">
 				<source><![CDATA[Add track]]></source>
 			</trans-unit>
-			<trans-unit id="tabs.content">
-				<source><![CDATA[Content]]></source>
+			<trans-unit id="tabs.tracklist">
+				<source><![CDATA[Tracklist]]></source>
+			</trans-unit>
+			<trans-unit id="tabs.relations">
+				<source><![CDATA[Relations]]></source>
 			</trans-unit>
 		</body>
 	</file>

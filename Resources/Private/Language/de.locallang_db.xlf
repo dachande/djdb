@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-12T19:22:58Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-10T15:40:52Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="tx_djdb_domain_model_album.field.artist" approved="yes">
+				<source><![CDATA[Artist]]></source>
+				<target><![CDATA[Interpret]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.cover" approved="yes">
+				<source><![CDATA[Cover]]></source>
+				<target><![CDATA[Cover]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.description" approved="yes">
+				<source><![CDATA[Description]]></source>
+				<target><![CDATA[Beschreibung]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.discogs_id" approved="yes">
+				<source><![CDATA[Discogs Release ID]]></source>
+				<target><![CDATA[Discogs Release ID]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.downloads" approved="yes">
+				<source><![CDATA[Downloads]]></source>
+				<target><![CDATA[Downloads]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.duration" approved="yes">
+				<source><![CDATA[Duration]]></source>
+				<target><![CDATA[Dauer]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.genres" approved="yes">
+				<source><![CDATA[Genres]]></source>
+				<target><![CDATA[Genres]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.is_featured" approved="yes">
+				<source><![CDATA[Featured]]></source>
+				<target><![CDATA[Hervorgehoben]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.is_new" approved="yes">
+				<source><![CDATA[New]]></source>
+				<target><![CDATA[Neu]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.release_date" approved="yes">
+				<source><![CDATA[Release date]]></source>
+				<target><![CDATA[Veröffentlichungsdatum]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.title" approved="yes">
+				<source><![CDATA[Title]]></source>
+				<target><![CDATA[Titel]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.field.tracks" approved="yes">
+				<source><![CDATA[Tracks]]></source>
+				<target><![CDATA[Tracks]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_album.title" approved="yes">
+				<source><![CDATA[Album]]></source>
+				<target><![CDATA[Album]]></target>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_download.field.target" approved="yes">
 				<source><![CDATA[Download target]]></source>
 				<target><![CDATA[Download Ziel]]></target>
@@ -30,6 +82,10 @@
 			<trans-unit id="tx_djdb_domain_model_recording.field.downloads" approved="yes">
 				<source><![CDATA[Downloads]]></source>
 				<target><![CDATA[Downloads]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_recording.field.duration" approved="yes">
+				<source><![CDATA[Duration]]></source>
+				<target><![CDATA[Dauer]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_recording.field.name" approved="yes">
 				<source><![CDATA[Name]]></source>
@@ -55,16 +111,20 @@
 				<source><![CDATA[Description]]></source>
 				<target><![CDATA[Beschreibung]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_set.field.featured" approved="yes">
-				<source><![CDATA[Featured]]></source>
-				<target><![CDATA[Hervorgehoben]]></target>
-			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.genres" approved="yes">
 				<source><![CDATA[Genres]]></source>
 				<target><![CDATA[Genres]]></target>
 			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.is_featured" approved="yes">
+				<source><![CDATA[Featured]]></source>
+				<target><![CDATA[Hervorgehoben]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_set.field.is_new" approved="yes">
+				<source><![CDATA[New]]></source>
+				<target><![CDATA[Neu]]></target>
+			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.label" approved="yes">
-				<source><![CDATA[Name of Label]]></source>
+				<source><![CDATA[Name of label]]></source>
 				<target><![CDATA[Name des Labels]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.recordings" approved="yes">
@@ -72,7 +132,7 @@
 				<target><![CDATA[Aufnahmen]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.release" approved="yes">
-				<source><![CDATA[Name of Release]]></source>
+				<source><![CDATA[Name of release]]></source>
 				<target><![CDATA[Name des Releases]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_set.field.release_date" approved="yes">
@@ -86,6 +146,14 @@
 			<trans-unit id="tx_djdb_domain_model_set.title" approved="yes">
 				<source><![CDATA[Set]]></source>
 				<target><![CDATA[Set]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.albums" approved="yes">
+				<source><![CDATA[Album]]></source>
+				<target><![CDATA[Album]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.artist" approved="yes">
+				<source><![CDATA[Artist]]></source>
+				<target><![CDATA[Interpret]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.cover" approved="yes">
 				<source><![CDATA[Cover]]></source>
@@ -103,35 +171,35 @@
 				<source><![CDATA[Downloads]]></source>
 				<target><![CDATA[Downloads]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.featured" approved="yes">
-				<source><![CDATA[Featured]]></source>
-				<target><![CDATA[Hervorgehoben]]></target>
+			<trans-unit id="tx_djdb_domain_model_track.field.duration" approved="yes">
+				<source><![CDATA[Duration]]></source>
+				<target><![CDATA[Dauer]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.genres" approved="yes">
 				<source><![CDATA[Genres]]></source>
 				<target><![CDATA[Genres]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.release_artist" approved="yes">
-				<source><![CDATA[Release artist]]></source>
-				<target><![CDATA[Release Interpret]]></target>
+			<trans-unit id="tx_djdb_domain_model_track.field.is_featured" approved="yes">
+				<source><![CDATA[Featured]]></source>
+				<target><![CDATA[Hervorgehoben]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.is_new" approved="yes">
+				<source><![CDATA[New]]></source>
+				<target><![CDATA[Neu]]></target>
+			</trans-unit>
+			<trans-unit id="tx_djdb_domain_model_track.field.recordings" approved="yes">
+				<source><![CDATA[Recording]]></source>
+				<target><![CDATA[Aufnahme]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.release_date" approved="yes">
 				<source><![CDATA[Release date]]></source>
 				<target><![CDATA[Veröffentlichungsdatum]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.release_title" approved="yes">
-				<source><![CDATA[Release title]]></source>
-				<target><![CDATA[Release Titel]]></target>
-			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.set_position" approved="yes">
 				<source><![CDATA[Track position in Set]]></source>
 				<target><![CDATA[Trackposition im Set]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.track_artist" approved="yes">
-				<source><![CDATA[Artist]]></source>
-				<target><![CDATA[Interpret]]></target>
-			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.track_title" approved="yes">
+			<trans-unit id="tx_djdb_domain_model_track.field.title" approved="yes">
 				<source><![CDATA[Title]]></source>
 				<target><![CDATA[Titel]]></target>
 			</trans-unit>

@@ -11,10 +11,52 @@
 				<source><![CDATA[Audio track record]]></source>
 			</trans-unit>
 			<trans-unit id=".details">
-				<source><![CDATA[An audio track record contains details about a specific audio track from a specific release.&lt;br&gt;It can be used as a standalone record or as part of a recording. If it is used as a standalone record one or more download records can be attached if you want your visitors to be able to download the audio track.]]></source>
+				<source><![CDATA[A track represents a single piece of music. Depending on the usage of the track model it can be either used as a stand-alone representation of a music track (like a single) or as a part of an album and/or part of a recording.
+
+				<b>Stand-alone</b>
+				If used stand-alone the track can have a download relation if a download link for that track exists.
+
+				<b>Part of an album</b>
+				If used as part of an album the relation to the download model should not be set as the download relation is being managed through the album model instead.
+
+				<b>Part of a recording</b>
+				If used as part of a recording the relation to the download model should not be set as the download relation is being managed through the recording model instead.]]></source>
 			</trans-unit>
-			<trans-unit id="discogs_id.description">
-				<source><![CDATA[Enter a release id from discogs if you want to add a link to the Discogs release page.]]></source>
+			<trans-unit id="release_date.description">
+				<source><![CDATA[The date when the track has been released]]></source>
+			</trans-unit>
+			<trans-unit id="release_date.details">
+				<source><![CDATA[Although the release date field contains date and time the time part is not taken into account when being displayed in the frontend.]]></source>
+			</trans-unit>
+			<trans-unit id="is_new.description">
+				<source><![CDATA[Highlight a track as NEW]]></source>
+			</trans-unit>
+			<trans-unit id="is_new.details">
+				<source><![CDATA[You can highlight a track with a NEW badge by enabling this option.]]></source>
+			</trans-unit>
+			<trans-unit id="is_featured.description">
+				<source><![CDATA[Highlight a track as FEATURED]]></source>
+			</trans-unit>
+			<trans-unit id="is_featured.details">
+				<source><![CDATA[You can highlight a track with a FEATURED badge by enabling this option. This will also show this track in a list of tracks having the FEATURED option enabled when using a plugin set to show only FEATURED tracks.]]></source>
+			</trans-unit>
+			<trans-unit id="downloads.description">
+				<source><![CDATA[Add one or more download options for this track]]></source>
+			</trans-unit>
+			<trans-unit id="downloads.details">
+				<source><![CDATA[You can add one or more download options for a track. You should only use this feature on stand-alone tracks not associated to an album or a recording unless the track should still be considered stand-alone and has a separate download.]]></source>
+			</trans-unit>
+			<trans-unit id="albums.description">
+				<source><![CDATA[Associate the track to an album]]></source>
+			</trans-unit>
+			<trans-unit id="albums.details">
+				<source><![CDATA[If the track is part of an album you can set this association here.]]></source>
+			</trans-unit>
+			<trans-unit id="recordings.description">
+				<source><![CDATA[Associate the track to a recording]]></source>
+			</trans-unit>
+			<trans-unit id="recordings.details">
+				<source><![CDATA[If the track is part of a DJ set you can attach it to a recording that is part of that particular DJ set.]]></source>
 			</trans-unit>
 		</body>
 	</file>

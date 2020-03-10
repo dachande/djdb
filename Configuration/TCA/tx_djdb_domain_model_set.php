@@ -348,7 +348,15 @@ return call_user_func(function () {
                     'maxitems' => 100,
                     'foreign_table' => 'tx_djdb_domain_model_genre',
                     'foreign_table_where' => 'AND {#tx_djdb_domain_model_genre}.{#pid}=###CURRENT_PID### AND {#tx_djdb_domain_model_genre}.{#sys_language_uid} IN (-1,0) ORDER BY tx_djdb_domain_model_genre.name',
-                    'MM' => 'tx_djdb_domain_model_set_genre_mm',
+                    'MM' => 'tx_djdb_set_genre_mm',
+                    'fieldControl' => [
+                        'addRecord' => [
+                            'disabled' => false,
+                        ],
+                        'editPopup' => [
+                            'disabled' => false,
+                        ],
+                    ],
                 ],
             ],
             'recordings' => [
@@ -379,9 +387,23 @@ return call_user_func(function () {
                     ],
                 ],
             ],
-            'featured' => [
+            'is_new' => [
                 'exclude' => true,
-                'label' => $ll . 'field.featured',
+                'label' => $ll . 'field.is_new',
+                'config' => [
+                    'type' => 'check',
+                    'renderType' => 'checkboxToggle',
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                ],
+            ],
+            'is_featured' => [
+                'exclude' => true,
+                'label' => $ll . 'field.is_featured',
                 'config' => [
                     'type' => 'check',
                     'renderType' => 'checkboxToggle',
@@ -400,15 +422,15 @@ return call_user_func(function () {
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         title,
                         genres,
+                        --palette--;;properties,
                         release,
                         label,
                         catno,
                         release_date,
-                        featured,
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         cover,
-                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.content,
+                    --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.relations,
                         recordings,
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                         --palette--;;language,
@@ -419,6 +441,13 @@ return call_user_func(function () {
             ],
         ],
         'palettes' => [
+            'properties' => [
+                'label' => 'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:palette.properties',
+                'showitem' => '
+                    is_new,
+                    is_featured,
+                ',
+            ],
             'hidden' => [
                 'showitem' => '
                     hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:field.default.hidden

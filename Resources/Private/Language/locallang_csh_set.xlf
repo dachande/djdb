@@ -1,11 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-03-13T15:52:12Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-10T11:21:11Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id=".description">
+				<source><![CDATA[DJ set record]]></source>
+			</trans-unit>
+			<trans-unit id=".details">
+				<source><![CDATA[The set model represents a DJ set which will most likely consist of multiple audio tracks mixed together by a DJ. Depending on the length of a DJ set it will be represented through one or more recordings.]]></source>
+			</trans-unit>
+			<trans-unit id="catno.description">
+				<source><![CDATA[The catalogue number that was used for the release of the DJ set by the music label.]]></source>
+			</trans-unit>
+			<trans-unit id="catno.details">
+				<source><![CDATA[If the label also uses catalogue numbers to index DJ sets you can specify it here.]]></source>
+			</trans-unit>
+			<trans-unit id="is_featured.description">
+				<source><![CDATA[Highlight a DJ set as FEATURED]]></source>
+			</trans-unit>
+			<trans-unit id="is_featured.details">
+				<source><![CDATA[You can highlight a DJ set with a FEATURED marker by enabling this option. This will also show this DJ set in a list of DJ sets having the FEATURED option enabled when using a plugin which is configured to show only FEATURED DJ sets.]]></source>
+			</trans-unit>
+			<trans-unit id="is_new.description">
+				<source><![CDATA[Highlight a DJ set as NEW]]></source>
+			</trans-unit>
+			<trans-unit id="is_new.details">
+				<source><![CDATA[You can highlight a DJ set with a NEW marker by enabling this option.]]></source>
+			</trans-unit>
+			<trans-unit id="label.description">
+				<source><![CDATA[The name of the music label which released the DJ set.]]></source>
+			</trans-unit>
+			<trans-unit id="label.details">
+				<source><![CDATA[If the DJ set has been released by a music label you can specify its name here.]]></source>
+			</trans-unit>
+			<trans-unit id="recordings.description">
+				<source><![CDATA[Add recordings to the DJ set]]></source>
+			</trans-unit>
+			<trans-unit id="recordings.details">
+				<source><![CDATA[A DJ set consists of one or more recordings. These can be added here.]]></source>
+			</trans-unit>
+			<trans-unit id="release.description">
+				<source><![CDATA[Additional name for the release, if desired]]></source>
+			</trans-unit>
+			<trans-unit id="release.details">
+				<source><![CDATA[If you want to, you can specify an additional release name. For example, this can be used for the name of a music series.]]></source>
+			</trans-unit>
+			<trans-unit id="release_date.description">
+				<source><![CDATA[The date when the DJ set has been released]]></source>
+			</trans-unit>
+			<trans-unit id="release_date.details">
+				<source><![CDATA[Although the release date-field contains date and time the time is not taken into account when being displayed in the frontend.]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

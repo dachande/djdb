@@ -19,17 +19,25 @@
 				<source><![CDATA[Add track]]></source>
 				<target><![CDATA[Track hinzufügen]]></target>
 			</trans-unit>
-			<trans-unit id="palette.release" approved="yes">
-				<source><![CDATA[Release details]]></source>
-				<target><![CDATA[Release Details]]></target>
+			<trans-unit id="palette.album" approved="yes">
+				<source><![CDATA[Album details]]></source>
+				<target><![CDATA[Album Details]]></target>
 			</trans-unit>
 			<trans-unit id="palette.track" approved="yes">
 				<source><![CDATA[Track details]]></source>
 				<target><![CDATA[Track Details]]></target>
 			</trans-unit>
-			<trans-unit id="tabs.content" approved="yes">
-				<source><![CDATA[Content]]></source>
-				<target><![CDATA[Inhalt]]></target>
+			<trans-unit id="palette.properties" approved="yes">
+				<source><![CDATA[Properties]]></source>
+				<target><![CDATA[Eigenschaften]]></target>
+			</trans-unit>
+			<trans-unit id="tabs.tracklist" approved="yes">
+				<source><![CDATA[Tracklist]]></source>
+				<target><![CDATA[Track Liste]]></target>
+			</trans-unit>
+			<trans-unit id="tabs.relations">
+				<source><![CDATA[Relations]]></source>
+				<target><![CDATA[Relationen]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_sets.description" approved="yes">
 				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>
