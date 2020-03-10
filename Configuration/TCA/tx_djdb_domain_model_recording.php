@@ -28,6 +28,7 @@ return call_user_func(function () {
             'title' => $ll . 'title',
             'label' => 'name',
             'hideAtCopy' => true,
+            'hideTable' => true,
             'tstamp' => 'tstamp',
             'crdate' => 'crdate',
             'cruser_id' => 'cruser_id',
