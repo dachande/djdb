@@ -27,6 +27,7 @@ return call_user_func(function () {
         'ctrl' => [
             'title' => $ll . 'title',
             'label' => 'name',
+            'label_userFunc' => \Dachande\Djdb\Utility\TcaUtility::class . '->getRecordingLabel',
             'hideAtCopy' => true,
             'hideTable' => true,
             'tstamp' => 'tstamp',

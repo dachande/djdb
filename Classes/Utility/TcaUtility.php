@@ -33,8 +33,15 @@ class TcaUtility
      */
     public function getArtistTitleLabel(array &$parameters)
     {
-        $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+        $parameters['title'] = $parameters['row']['artist'] . ' - ' . $parameters['row']['title'];
+    }
 
-        $parameters['title'] = $record['artist'] . ' - ' . $record['title'];
+    public function getRecordingLabel(array &$parameters)
+    {
+        $setRecord = BackendUtility::getRecord('tx_djdb_domain_model_set', $parameters['row']['set']);
+
+        $parameters['title'] = (!empty($setRecord))
+            ? $setRecord['title'] . ' - ' . $parameters['row']['name']
+            : $parameters['row']['name'];
     }
 }
