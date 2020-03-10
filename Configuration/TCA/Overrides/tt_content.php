@@ -30,6 +30,13 @@ call_user_func(function () {
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
         'Dachande.Djdb',
+        'Albums',
+        'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_albums.title',
+        'tx-djdb-albums'
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+        'Dachande.Djdb',
         'Tracks',
         'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.title',
         'tx-djdb-tracks'

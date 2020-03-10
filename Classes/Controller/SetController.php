@@ -52,6 +52,7 @@ class SetController extends ActionController
      */
     public function listAction()
     {
+        // TODO: Use demand interface instead of using find method from repository
         $sets = $this->setRepository->findAll();
 
         $this->view->assignMultiple([
@@ -65,7 +66,7 @@ class SetController extends ActionController
      * @param \Dachande\Djdb\Domain\Model\Set|null $set
      * @return void
      */
-    public function showAction(Set $set = null)
+    public function detailAction(Set $set = null)
     {
         $this->view->assignMultiple([
             'set' => $set,

@@ -10,6 +10,16 @@ mod.wizards.newContentElement.wizardItems.plugins {
             }
         }
 
+        djdb_albums {
+            iconIdentifier = tx-djdb-albums
+            title = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_albums.title
+            description = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_albums.description
+            tt_content_defValues {
+                CType = list
+                list_type = djdb_albums
+            }
+        }
+
         djdb_tracks {
             iconIdentifier = tx-djdb-tracks
             title = LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.title
@@ -22,5 +32,6 @@ mod.wizards.newContentElement.wizardItems.plugins {
     }
 
     show := addToList(djdb_sets)
+    show := addToList(djdb_albums)
     show := addToList(djdb_tracks)
 }

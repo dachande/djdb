@@ -25,7 +25,17 @@ call_user_func(function () {
         'Dachande.Djdb',
         'Sets',
         [
-            'Set' => 'list,show',
+            'Set' => 'list,detail',
+        ],
+        [
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Dachande.Djdb',
+        'Albums',
+        [
+            'Album' => 'list,detail',
         ],
         [
         ]
@@ -35,7 +45,7 @@ call_user_func(function () {
         'Dachande.Djdb',
         'Tracks',
         [
-            'Track' => 'list,show',
+            'Track' => 'list,detail',
         ],
         [
         ]
@@ -46,6 +56,10 @@ call_user_func(function () {
         [
             'tx-djdb-sets',
             'EXT:djdb/Resources/Public/Icons/Set.svg'
+        ],
+        [
+            'tx-djdb-albums',
+            'EXT:djdb/Resources/Public/Icons/Album.svg'
         ],
         [
             'tx-djdb-tracks',
