@@ -430,6 +430,17 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'duration' => [
+                'exclude' => false,
+                'label' => $ll . 'field.duration',
+                'config' => [
+                    'type' => 'input',
+                    'eval' => 'trim,timesec',
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
         ],
         'types' => [
             '1' => [
@@ -438,6 +449,7 @@ return call_user_func(function () {
                         --palette--;;album,
                         genres,
                         release_date,
+                        duration,
                         --palette--;;properties,
                         description,
                         discogs_id,

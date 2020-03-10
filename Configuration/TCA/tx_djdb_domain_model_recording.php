@@ -220,6 +220,17 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'duration' => [
+                'exclude' => false,
+                'label' => $ll . 'field.duration',
+                'config' => [
+                    'type' => 'input',
+                    'eval' => 'trim,timesec',
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
             'downloads' => [
                 'exclude' => true,
                 'label' => $ll . 'field.downloads',
@@ -281,6 +292,7 @@ return call_user_func(function () {
                 'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         name,
+                        duration,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
                         downloads,
                     --div--;LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tabs.tracklist,

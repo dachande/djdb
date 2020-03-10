@@ -22,7 +22,8 @@ CREATE TABLE tx_djdb_domain_model_recording (
   name tinytext,
   downloads int(11) unsigned DEFAULT '0' NOT NULL,
   set int(11) unsigned DEFAULT '0' NOT NULL,
-  tracks int(11) unsigned DEFAULT '0' NOT NULL
+  tracks int(11) unsigned DEFAULT '0' NOT NULL,
+  duration int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #
@@ -39,7 +40,8 @@ CREATE TABLE tx_djdb_domain_model_album (
   downloads int(11) unsigned DEFAULT '0' NOT NULL,
   tracks int(11) unsigned DEFAULT '0' NOT NULL,
   is_new int(1) unsigned DEFAULT '0' NOT NULL,
-  is_featured int(1) unsigned DEFAULT '0' NOT NULL
+  is_featured int(1) unsigned DEFAULT '0' NOT NULL,
+  duration int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #
@@ -55,7 +57,8 @@ CREATE TABLE tx_djdb_domain_model_track (
   recordings int(11) unsigned DEFAULT '0' NOT NULL,
   albums int(11) unsigned DEFAULT '0' NOT NULL,
   is_new int(1) unsigned DEFAULT '0' NOT NULL,
-  is_featured int(1) unsigned DEFAULT '0' NOT NULL
+  is_featured int(1) unsigned DEFAULT '0' NOT NULL,
+  duration int(11) unsigned DEFAULT '0' NOT NULL
 );
 
 #

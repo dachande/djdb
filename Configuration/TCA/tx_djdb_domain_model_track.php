@@ -395,6 +395,17 @@ return call_user_func(function () {
                     ],
                 ],
             ],
+            'duration' => [
+                'exclude' => false,
+                'label' => $ll . 'field.duration',
+                'config' => [
+                    'type' => 'input',
+                    'eval' => 'trim,timesec',
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
         ],
         'types' => [
             '1' => [
@@ -403,6 +414,7 @@ return call_user_func(function () {
                         --palette--;;track,
                         genres,
                         release_date,
+                        duration,
                         --palette--;;properties,
                         description,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
