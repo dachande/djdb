@@ -13,7 +13,7 @@
 			</trans-unit>
 			<trans-unit id=".details" approved="yes">
 				<source><![CDATA[An audio track record contains details about a specific audio track from a specific release.&lt;br&gt;It can be used as a standalone record or as part of a recording. If it is used as a standalone record one or more download records can be attached if you want your visitors to be able to download the audio track.]]></source>
-				<target><![CDATA[Ein Audio Track Datensatz enthält Details über einen bestimmten Audio Track eines bestimmten Releases. Ein Audio Track kann entweder selbstständig oder als Bestandteil einer Aufnahme bestehen. Falls der Audio Track selbstständig verwendet wird, können diesem ein oder mehrere Downloads angehängt werden, um den Besuchern eine Download Option für den Audio Track anzubieten.]]></target>
+				<target><![CDATA[Ein Audio Track Datensatz enthält Details über einen bestimmten Audio Track eines bestimmten Albums. Ein Audio Track kann entweder selbstständig oder als Bestandteil einer Aufnahme bestehen. Falls der Audio Track selbstständig verwendet wird, können diesem ein oder mehrere Downloads angehängt werden, um den Besuchern eine Download Option für den Audio Track anzubieten.]]></target>
 			</trans-unit>
 			<trans-unit id="discogs_id.description" approved="yes">
 				<source><![CDATA[Enter a release id from discogs if you want to add a link to the Discogs release page.]]></source>

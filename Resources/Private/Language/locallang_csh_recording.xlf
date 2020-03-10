@@ -1,11 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-03-13T15:52:12Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-10T13:36:16Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="downloads.description">
+				<source><![CDATA[Add one or more download options for this recording]]></source>
+			</trans-unit>
+			<trans-unit id="downloads.details">
+				<source><![CDATA[You can add one or more download options for a recording.]]></source>
+			</trans-unit>
+			<trans-unit id="tracks.description">
+				<source><![CDATA[Add one or more audio tracks to this recording]]></source>
+			</trans-unit>
+			<trans-unit id="tracks.details">
+				<source><![CDATA[This list contains all audio tracks of the recording. The order of the audio titles can be adjusted.]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
