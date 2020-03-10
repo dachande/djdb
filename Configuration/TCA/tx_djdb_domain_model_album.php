@@ -324,6 +324,17 @@ return call_user_func(function () {
                     'default' => 0,
                 ],
             ],
+            'duration' => [
+                'exclude' => false,
+                'label' => $ll . 'field.duration',
+                'config' => [
+                    'type' => 'input',
+                    'eval' => 'trim,timesec',
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
             'description' => [
                 'exclude' => true,
                 'label' => $ll . 'field.description',
@@ -427,17 +438,6 @@ return call_user_func(function () {
                             0 => '',
                             1 => '',
                         ],
-                    ],
-                ],
-            ],
-            'duration' => [
-                'exclude' => false,
-                'label' => $ll . 'field.duration',
-                'config' => [
-                    'type' => 'input',
-                    'eval' => 'trim,timesec',
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true,
                     ],
                 ],
             ],

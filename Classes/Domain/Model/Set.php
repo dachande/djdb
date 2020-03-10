@@ -37,7 +37,7 @@ class Set extends AbstractEntity
     /**
      * @var string
      */
-    protected $album = '';
+    protected $release = '';
 
     /**
      * @var string
@@ -52,7 +52,7 @@ class Set extends AbstractEntity
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
-    protected $cover = null;
+    protected $cover;
 
     /**
      * @var int
@@ -126,24 +126,24 @@ class Set extends AbstractEntity
     }
 
     /**
-     * Get the value of album
+     * Get the value of release
      *
      * @return string
      */
-    public function getAlbum(): string
+    public function getRelease(): string
     {
-        return $this->album;
+        return $this->release;
     }
 
     /**
-     * Set the value of album
+     * Set the value of release
      *
-     * @param string $album
+     * @param string $release
      * @return void
      */
-    public function setAlbum(string $album)
+    public function setRelease(string $release)
     {
-        $this->album = $album;
+        $this->release = $release;
     }
 
     /**

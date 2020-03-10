@@ -38,6 +38,11 @@ class Track extends AbstractEntity
     protected $artist = '';
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
+     */
+    protected $genres = null;
+
+    /**
      * @var int
      */
     protected $releaseDate = 0;
@@ -48,14 +53,19 @@ class Track extends AbstractEntity
     protected $description = '';
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
-     */
-    protected $genres = null;
-
-    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
      */
-    protected $downloads;
+    protected $downloads = null;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Album>
+     */
+    protected $albums = null;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Recording>
+     */
+    protected $recordings = null;
 
     /**
      * @var bool
@@ -66,6 +76,11 @@ class Track extends AbstractEntity
      * @var bool
      */
     protected $isFeatured = false;
+
+    /**
+     * @var int
+     */
+    protected $duration = 0;
 
     /**
      * Constructor
@@ -84,6 +99,8 @@ class Track extends AbstractEntity
     {
         $this->genres = new ObjectStorage;
         $this->downloads = new ObjectStorage;
+        $this->albums = new ObjectStorage;
+        $this->recordings = new ObjectStorage;
     }
 
     /**
@@ -124,49 +141,6 @@ class Track extends AbstractEntity
     public function setArtist(string $artist)
     {
         $this->artist = $artist;
-    }
-
-
-    /**
-     * Get the value of releaseDate
-     *
-     * @return int
-     */
-    public function getReleaseDate()
-    {
-        return $this->releaseDate;
-    }
-
-    /**
-     * Set the value of releaseDate
-     *
-     * @param int $releaseDate
-     * @return void
-     */
-    public function setReleaseDate(int $releaseDate)
-    {
-        $this->releaseDate = $releaseDate;
-    }
-
-    /**
-     * Get the value of description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set the value of description
-     *
-     * @param string $description
-     * @return void
-     */
-    public function setDescription(string $description)
-    {
-        $this->description = $description;
     }
 
     /**
@@ -215,6 +189,48 @@ class Track extends AbstractEntity
     }
 
     /**
+     * Get the value of releaseDate
+     *
+     * @return int
+     */
+    public function getReleaseDate()
+    {
+        return $this->releaseDate;
+    }
+
+    /**
+     * Set the value of releaseDate
+     *
+     * @param int $releaseDate
+     * @return void
+     */
+    public function setReleaseDate(int $releaseDate)
+    {
+        $this->releaseDate = $releaseDate;
+    }
+
+    /**
+     * Get the value of description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set the value of description
+     *
+     * @param string $description
+     * @return void
+     */
+    public function setDescription(string $description)
+    {
+        $this->description = $description;
+    }
+
+    /**
      * Get the value of downloads
      *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
@@ -260,6 +276,96 @@ class Track extends AbstractEntity
     }
 
     /**
+     * Get the value of albums
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Album>
+     */
+    public function getAlbums(): ObjectStorage
+    {
+        return $this->albums;
+    }
+
+    /**
+     * Set the value of albums
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Album> $albums
+     * @return void
+     */
+    public function setAlbums(ObjectStorage $albums)
+    {
+        $this->albums = $albums;
+
+        return $this;
+    }
+
+    /**
+     * Add album
+     *
+     * @param \Dachande\Djdb\Domain\Model\Album $album
+     * @return void
+     */
+    public function addAlbum(Album $album)
+    {
+        $this->albums->attach($album);
+    }
+
+    /**
+     * Remove album
+     *
+     * @param \Dachande\Djdb\Domain\Model\Album $album
+     * @return void
+     */
+    public function removeAlbum(Album $album)
+    {
+        $this->albums->detach($album);
+    }
+
+    /**
+     * Get the value of recordings
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Recording>
+     */
+    public function getRecordings(): ObjectStorage
+    {
+        return $this->recordings;
+    }
+
+    /**
+     * Set the value of recordings
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Recording> $recordings
+     * @return void
+     */
+    public function setRecordings(ObjectStorage $recordings)
+    {
+        $this->recordings = $recordings;
+
+        return $this;
+    }
+
+    /**
+     * Add recording
+     *
+     * @param \Dachande\Djdb\Domain\Model\Recording $recording
+     * @return void
+     */
+    public function addRecording(Recording $recording)
+    {
+        $this->recordings->attach($recording);
+    }
+
+    /**
+     * Remove recording
+     *
+     * @param \Dachande\Djdb\Domain\Model\Recording $recording
+     * @return void
+     */
+    public function removeRecording(Recording $recording)
+    {
+        $this->recordings->detach($recording);
+    }
+
+    /**
      * Get the value of isNew
      *
      * @return bool
@@ -299,5 +405,26 @@ class Track extends AbstractEntity
     public function setIsFeatured(bool $isFeatured)
     {
         $this->isFeatured = $isFeatured;
+    }
+
+    /**
+     * Get the value of duration
+     *
+     * @return int
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set the value of duration
+     *
+     * @param int $duration
+     * @return void
+     */
+    public function setDuration(int $duration)
+    {
+        $this->duration = $duration;
     }
 }

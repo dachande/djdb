@@ -39,6 +39,11 @@ class Album extends AbstractEntity
     protected $artist = '';
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
+     */
+    protected $genres = null;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
     protected $cover = null;
@@ -47,6 +52,11 @@ class Album extends AbstractEntity
      * @var int
      */
     protected $releaseDate = 0;
+
+    /**
+     * @var int
+     */
+    protected $duration = 0;
 
     /**
      * @var string
@@ -59,14 +69,14 @@ class Album extends AbstractEntity
     protected $discogsId = '';
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
-     */
-    protected $genres = null;
-
-    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Download>
      */
-    protected $downloads;
+    protected $downloads = null;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Track>
+     */
+    protected $tracks = null;
 
     /**
      * @var bool
@@ -93,9 +103,10 @@ class Album extends AbstractEntity
      */
     protected function initializeObjectStorages()
     {
-        $this->cover = new ObjectStorage;
         $this->genres = new ObjectStorage;
+        $this->cover = new ObjectStorage;
         $this->downloads = new ObjectStorage;
+        $this->tracks = new ObjectStorage;
     }
 
     /**
@@ -138,6 +149,51 @@ class Album extends AbstractEntity
     public function setArtist(string $artist)
     {
         $this->artist = $artist;
+    }
+
+    /**
+     * Get the value of genres
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
+     */
+    public function getGenres(): ObjectStorage
+    {
+        return $this->genres;
+    }
+
+    /**
+     * Set the value of genres
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre> $genres
+     * @return void
+     */
+    public function setGenres(ObjectStorage $genres)
+    {
+        $this->genres = $genres;
+
+        return $this;
+    }
+
+    /**
+     * Add genre
+     *
+     * @param \Dachande\Djdb\Domain\Model\Genre $genre
+     * @return void
+     */
+    public function addGenre(Genre $genre)
+    {
+        $this->genres->attach($genre);
+    }
+
+    /**
+     * Remove genre
+     *
+     * @param \Dachande\Djdb\Domain\Model\Genre $genre
+     * @return void
+     */
+    public function removeGenre(Genre $genre)
+    {
+        $this->genres->detach($genre);
     }
 
     /**
@@ -207,6 +263,27 @@ class Album extends AbstractEntity
     }
 
     /**
+     * Get the value of duration
+     *
+     * @return int
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set the value of duration
+     *
+     * @param int $duration
+     * @return void
+     */
+    public function setDuration(int $duration)
+    {
+        $this->duration = $duration;
+    }
+
+    /**
      * Get the value of description
      *
      * @return string
@@ -246,51 +323,6 @@ class Album extends AbstractEntity
     public function setDiscogsId(string $discogsId)
     {
         $this->discogsId = $discogsId;
-    }
-
-    /**
-     * Get the value of genres
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre>
-     */
-    public function getGenres(): ObjectStorage
-    {
-        return $this->genres;
-    }
-
-    /**
-     * Set the value of genres
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Genre> $genres
-     * @return void
-     */
-    public function setGenres(ObjectStorage $genres)
-    {
-        $this->genres = $genres;
-
-        return $this;
-    }
-
-    /**
-     * Add genre
-     *
-     * @param \Dachande\Djdb\Domain\Model\Genre $genre
-     * @return void
-     */
-    public function addGenre(Genre $genre)
-    {
-        $this->genres->attach($genre);
-    }
-
-    /**
-     * Remove genre
-     *
-     * @param \Dachande\Djdb\Domain\Model\Genre $genre
-     * @return void
-     */
-    public function removeGenre(Genre $genre)
-    {
-        $this->genres->detach($genre);
     }
 
     /**
@@ -336,6 +368,51 @@ class Album extends AbstractEntity
     public function removeDownload(Download $download)
     {
         $this->downloads->detach($download);
+    }
+
+    /**
+     * Get the value of tracks
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Track>
+     */
+    public function getTracks(): ObjectStorage
+    {
+        return $this->tracks;
+    }
+
+    /**
+     * Set the value of tracks
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dachande\Djdb\Domain\Model\Track> $tracks
+     * @return void
+     */
+    public function setTracks(ObjectStorage $tracks)
+    {
+        $this->tracks = $tracks;
+
+        return $this;
+    }
+
+    /**
+     * Add track
+     *
+     * @param \Dachande\Djdb\Domain\Model\Track $track
+     * @return void
+     */
+    public function addTrack(Track $track)
+    {
+        $this->tracks->attach($track);
+    }
+
+    /**
+     * Remove track
+     *
+     * @param \Dachande\Djdb\Domain\Model\Track $track
+     * @return void
+     */
+    public function removeTrack(Track $track)
+    {
+        $this->tracks->detach($track);
     }
 
     /**
