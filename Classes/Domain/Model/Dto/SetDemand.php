@@ -23,4 +23,29 @@ namespace Dachande\Djdb\Domain\Model\Dto;
 
 class SetDemand extends AbstractDemand
 {
+    /**
+     * @var string
+     */
+    protected $label = '';
+
+    /**
+     * Get the value of label
+     *
+     * @return string
+     */
+    public function getLabel(): string
+    {
+        return $this->label;
+    }
+
+    /**
+     * Set the value of label
+     *
+     * @param string $label
+     * @return void
+     */
+    public function setLabel(string $label)
+    {
+        $this->label = $label;
+    }
 }

@@ -22,8 +22,10 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use Dachande\Djdb\Domain\Repository\SetRepository;
 use Dachande\Djdb\Domain\Model\Set;
+use Dachande\Djdb\Domain\Model\Dto\SetDemand;
 
 class SetController extends ActionController
 {
@@ -52,11 +54,14 @@ class SetController extends ActionController
      */
     public function listAction()
     {
-        // TODO: Use demand interface instead of using find method from repository
-        $sets = $this->setRepository->findAll();
+        $demand = $this->createDemandObjectFromSettings($this->settings);
+
+        $sets = $this->setRepository->findDemanded($demand);
 
         $this->view->assignMultiple([
             'sets' => $sets,
+            'demand' => $demand,
+            'settings' => $this->settings,
         ]);
     }
 
@@ -71,5 +76,42 @@ class SetController extends ActionController
         $this->view->assignMultiple([
             'set' => $set,
         ]);
+    }
+
+    /**
+     * Create the demand object which define which records will get shown
+     *
+     * @param array $settings
+     * @return \Dachande\Djdb\Domain\Model\Dto\SetDemand
+     */
+    protected function createDemandObjectFromSettings(array $settings): SetDemand
+    {
+        /**
+         * @var \Dachande\Djdb\Domain\Model\Dto\SetDemand $demand
+         */
+        $demand = $this->objectManager->get(SetDemand::class, $settings);
+
+        // TODO: Do basic setup of demand object
+        $demand->setGenres(GeneralUtility::trimExplode(',', $settings['genres'], true));
+        $demand->setGenreConjunction($settings['genreConjunction']);
+        $demand->setNewRestriction($settings['newRestriction']);
+        $demand->setFeaturedRestriction($settings['featuredRestriction']);
+
+        if ($settings['orderBy']) {
+            $demand->setOrder($settings['orderBy'] . ' ' . $settings['orderDirection']);
+        }
+
+        $demand->setNewFirst($settings['newFirst']);
+        $demand->setFeaturedFirst($settings['featuredFirst']);
+        $demand->setLimit($settings['limit']);
+        $demand->setOffset($settings['offset']);
+        $demand->setHideIdList($settings['hideIdList']);
+
+        // TODO: Get storage page(s) from startingpoint setting
+        // $demand->setStoragePage();
+
+        $demand->setLabel($settings['label']);
+
+        return $demand;
     }
 }

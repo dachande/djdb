@@ -27,9 +27,44 @@ use Dachande\Djdb\Domain\Model\DemandInterface;
 abstract class AbstractDemand extends AbstractDomainObject implements DemandInterface
 {
     /**
+     * @var array
+     */
+    protected $genres = [];
+
+    /**
+     * @var string
+     */
+    protected $genreConjunction = '';
+
+    /**
+     * @var bool
+     */
+    protected $newRestriction = false;
+
+    /**
+     * @var bool
+     */
+    protected $featuredRestriction = false;
+
+    /**
      * @var string
      */
     protected $order = '';
+
+    /**
+     * @var bool
+     */
+    protected $newFirst = false;
+
+    /**
+     * @var bool
+     */
+    protected $featuredFirst = false;
+
+    /**
+     * @var string
+     */
+    protected $storagePage = '';
 
     /**
      * @var int
@@ -42,9 +77,98 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     protected $offset = 0;
 
     /**
-     * @var int
+     * @var string
      */
-    protected $storagePage = 0;
+    protected $hideIdList = '';
+
+    /**
+     * @var string
+     */
+    protected $idList = '';
+
+    /**
+     * Get the value of genres
+     *
+     * @return array
+     */
+    public function getGenres(): array
+    {
+        return $this->genres;
+    }
+
+    /**
+     * Set the value of genres
+     *
+     * @param array $genres
+     * @return void
+     */
+    public function setGenres(array $genres)
+    {
+        $this->genres = $genres;
+    }
+
+    /**
+     * Get the value of genreConjunction
+     *
+     * @return string
+     */
+    public function getGenreConjunction(): string
+    {
+        return $this->genreConjunction;
+    }
+
+    /**
+     * Set the value of genreConjunction
+     *
+     * @param string $genreConjunction
+     * @return void
+     */
+    public function setGenreConjunction(string $genreConjunction)
+    {
+        $this->genreConjunction = $genreConjunction;
+    }
+
+    /**
+     * Get the value of newRestriction
+     *
+     * @return bool
+     */
+    public function getNewRestriction(): bool
+    {
+        return $this->newRestriction;
+    }
+
+    /**
+     * Set the value of newRestriction
+     *
+     * @param bool $newRestriction
+     * @return void
+     */
+    public function setNewRestriction(bool $newRestriction)
+    {
+        $this->newRestriction = $newRestriction;
+    }
+
+    /**
+     * Get the value of featuredRestriction
+     *
+     * @return bool
+     */
+    public function getFeaturedRestriction(): bool
+    {
+        return $this->featuredRestriction;
+    }
+
+    /**
+     * Set the value of featuredRestriction
+     *
+     * @param bool $featuredRestriction
+     * @return void
+     */
+    public function setFeaturedRestriction(bool $featuredRestriction)
+    {
+        $this->featuredRestriction = $featuredRestriction;
+    }
 
     /**
      * Get the value of order
@@ -65,6 +189,69 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     public function setOrder(string $order)
     {
         $this->order = $order;
+    }
+
+    /**
+     * Get the value of newFirst
+     *
+     * @return bool
+     */
+    public function getNewFirst(): bool
+    {
+        return $this->newFirst;
+    }
+
+    /**
+     * Set the value of newFirst
+     *
+     * @param bool $newFirst
+     * @return void
+     */
+    public function setNewFirst(bool $newFirst)
+    {
+        $this->newFirst = $newFirst;
+    }
+
+    /**
+     * Get the value of featuredFirst
+     *
+     * @return bool
+     */
+    public function getFeaturedFirst(): bool
+    {
+        return $this->featuredFirst;
+    }
+
+    /**
+     * Set the value of featuredFirst
+     *
+     * @param bool $featuredFirst
+     * @return void
+     */
+    public function setFeaturedFirst(bool $featuredFirst)
+    {
+        $this->featuredFirst = $featuredFirst;
+    }
+
+    /**
+     * Get the value of storagePage
+     *
+     * @return string
+     */
+    public function getStoragePage(): string
+    {
+        return $this->storagePage;
+    }
+
+    /**
+     * Set the value of storagePage
+     *
+     * @param string $storagePage
+     * @return void
+     */
+    public function setStoragePage(string $storagePage)
+    {
+        $this->storagePage = $storagePage;
     }
 
     /**
@@ -110,25 +297,44 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     }
 
     /**
-     * Get the value of storagePage
+     * Get the value of hideIdList
      *
-     * @return int
+     * @return string
      */
-    public function getStoragePage(): int
+    public function getHideIdList(): string
     {
-        return $this->storagePage;
+        return $this->hideIdList;
     }
 
     /**
-     * Set the value of storagePage
+     * Set the value of hideIdList
      *
-     * @param int $storagePage
+     * @param string $hideIdList
      * @return void
      */
-    public function setStoragePage(int $storagePage)
+    public function setHideIdList(string $hideIdList)
     {
-        $this->storagePage = $storagePage;
+        $this->hideIdList = $hideIdList;
+    }
 
-        return $this;
+    /**
+     * Get the value of idList
+     *
+     * @return string
+     */
+    public function getIdList(): string
+    {
+        return $this->idList;
+    }
+
+    /**
+     * Set the value of idList
+     *
+     * @param string $idList
+     * @return void
+     */
+    public function setIdList(string $idList)
+    {
+        $this->idList = $idList;
     }
 }
