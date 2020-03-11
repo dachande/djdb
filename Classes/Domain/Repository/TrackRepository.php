@@ -21,6 +21,20 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Domain\Repository;
 
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use Dachande\Djdb\Domain\Model\DemandInterface;
+
 class TrackRepository extends AbstractDemandedRepository
 {
+    protected function createConstraintsFromDemand(
+        QueryInterface $query,
+        DemandInterface $demand
+    ): array {
+        return [];
+    }
+
+    protected function createOrderingsFromDemand(DemandInterface $demand): array
+    {
+        return [];
+    }
 }
