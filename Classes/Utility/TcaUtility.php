@@ -30,18 +30,42 @@ class TcaUtility
      *
      * @param array $parameters
      * @return void
+     * @throws \InvalidArgumentException
      */
     public function getArtistTitleLabel(array &$parameters)
     {
-        $parameters['title'] = $parameters['row']['artist'] . ' - ' . $parameters['row']['title'];
+        $record = $this->getCurrentRecord($parameters);
+        $parameters['title'] = $record['artist'] . ' - ' . $record['title'];
     }
 
+    /**
+     * Alter label by combining set title with recording name
+     *
+     * @param array $parameters
+     * @return void
+     * @throws \InvalidArgumentException
+     */
     public function getRecordingLabel(array &$parameters)
     {
-        $setRecord = BackendUtility::getRecord('tx_djdb_domain_model_set', $parameters['row']['set']);
+        $record = $this->getCurrentRecord($parameters);
+        $setRecord = (!empty($record) && $record['set'] !== null)
+            ? BackendUtility::getRecord('tx_djdb_domain_model_set', $record['set'])
+            : null;
 
         $parameters['title'] = (!empty($setRecord))
-            ? $setRecord['title'] . ' - ' . $parameters['row']['name']
-            : $parameters['row']['name'];
+            ? $setRecord['title'] . ' - ' . $record['name']
+            : $record['name'];
+    }
+
+    /**
+     * Get current record
+     *
+     * @param array $parameters
+     * @return array|null
+     *
+     */
+    protected function getCurrentRecord(array $parameters):? array
+    {
+        return BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
     }
 }
