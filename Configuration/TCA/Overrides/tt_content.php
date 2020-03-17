@@ -41,4 +41,11 @@ call_user_func(function () {
         'LLL:EXT:djdb/Resources/Private/Language/locallang_be.xlf:tx_djdb_tracks.title',
         'tx-djdb-tracks'
     );
+
+    $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['djdb_sets'] = 'recursive,select_key,pages';
+    $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['djdb_sets'] = 'pi_flexform';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        'djdb_sets',
+        'FILE:EXT:djdb/Configuration/FlexForms/flexform_djdb_sets.xml'
+    );
 });

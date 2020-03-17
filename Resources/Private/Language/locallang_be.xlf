@@ -1,31 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-03-13T15:52:12Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-17T18:57:09Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
-			<trans-unit id="tx_djdb_sets.title">
-				<source><![CDATA[DJDB: Sets Display]]></source>
+			<trans-unit id="flexforms_additional.backPid">
+				<source><![CDATA[PageId to return to]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_sets.description">
-				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>
+			<trans-unit id="flexforms_additional.detailPid">
+				<source><![CDATA[PageId for single DJ set display]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_tracks.title">
-				<source><![CDATA[DJDB: Tracks Display]]></source>
+			<trans-unit id="flexforms_additional.disableOverrideDemand">
+				<source><![CDATA[Disable override demand]]></source>
 			</trans-unit>
-			<trans-unit id="tx_djdb_tracks.description">
-				<source><![CDATA[This plugin is used to show an audio track overview page or a detail page containing details for a single audio track.]]></source>
+			<trans-unit id="flexforms_additional.excludeAlreadyDisplayedSets">
+				<source><![CDATA[Exclude already displayed DJ sets]]></source>
 			</trans-unit>
-			<trans-unit id="palette.track">
-				<source><![CDATA[Track details]]></source>
+			<trans-unit id="flexforms_additional.featuredSetsFirst">
+				<source><![CDATA[Sort "Featured DJ sets" before]]></source>
 			</trans-unit>
-			<trans-unit id="palette.album">
-				<source><![CDATA[Album details]]></source>
+			<trans-unit id="flexforms_additional.genres">
+				<source><![CDATA[Genres]]></source>
 			</trans-unit>
-			<trans-unit id="palette.properties">
-				<source><![CDATA[Properties]]></source>
+			<trans-unit id="flexforms_additional.limit">
+				<source><![CDATA[Max records displayed]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.listPid">
+				<source><![CDATA[PageId for list display]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.newSetsFirst">
+				<source><![CDATA[Sort "New DJ sets" before]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.offset">
+				<source><![CDATA[Starting with given DJ set record. 0 means first record, 1 the 2nd one!]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.featuredRestriction">
+				<source><![CDATA[Featured DJ Sets]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.featuredRestriction.1">
+				<source><![CDATA[only featured DJ set records]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.featuredRestriction.2">
+				<source><![CDATA[except featured DJ set records]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction">
+				<source><![CDATA[Genre mode]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.all">
+				<source><![CDATA[Don't care, show all]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.and">
+				<source><![CDATA[Show items with selected genres (AND)]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.notand">
+				<source><![CDATA[Do NOT show items with selected genres (AND)]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.notor">
+				<source><![CDATA[Do NOT show items with selected genres (OR)]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.or">
+				<source><![CDATA[Show items with selected genres (OR)]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.labelRestriction">
+				<source><![CDATA[Only show DJ set records from the following labels]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode">
+				<source><![CDATA[What to display]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.select">
+				<source><![CDATA[Please select]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.sets_detail">
+				<source><![CDATA[Detail view]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.sets_list">
+				<source><![CDATA[List view]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.sets_selectedList">
+				<source><![CDATA[List of DJ sets]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.newRestriction">
+				<source><![CDATA[New DJ Sets]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.newRestriction.1">
+				<source><![CDATA[only new DJ set records]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.newRestriction.2">
+				<source><![CDATA[except new DJ set records]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy">
+				<source><![CDATA[Sort by]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.catno">
+				<source><![CDATA[Catalogue No.]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.crdate">
+				<source><![CDATA[Created]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.no-constraint">
+				<source><![CDATA[No ordering]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.release_date">
+				<source><![CDATA[Release date]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.title">
+				<source><![CDATA[Title]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.tstamp">
+				<source><![CDATA[Last edited]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection">
+				<source><![CDATA[Sort direction]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection.asc">
+				<source><![CDATA[Ascending]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection.desc">
+				<source><![CDATA[Descending]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.selectedList">
+				<source><![CDATA[List of DJ sets]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.additional">
+				<source><![CDATA[Additional]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.settings">
+				<source><![CDATA[Settings]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.template">
+				<source><![CDATA[Template]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_template.mediaMaxHeight">
+				<source><![CDATA[Max height for media elements]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_template.mediaMaxWidth">
+				<source><![CDATA[Max width for media elements]]></source>
 			</trans-unit>
 			<trans-unit id="label.add_download">
 				<source><![CDATA[Add download option]]></source>
@@ -36,11 +148,32 @@
 			<trans-unit id="label.add_track">
 				<source><![CDATA[Add track]]></source>
 			</trans-unit>
-			<trans-unit id="tabs.tracklist">
-				<source><![CDATA[Tracklist]]></source>
+			<trans-unit id="palette.album">
+				<source><![CDATA[Album details]]></source>
+			</trans-unit>
+			<trans-unit id="palette.properties">
+				<source><![CDATA[Properties]]></source>
+			</trans-unit>
+			<trans-unit id="palette.track">
+				<source><![CDATA[Track details]]></source>
 			</trans-unit>
 			<trans-unit id="tabs.relations">
 				<source><![CDATA[Relations]]></source>
+			</trans-unit>
+			<trans-unit id="tabs.tracklist">
+				<source><![CDATA[Tracklist]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_sets.description">
+				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_sets.title">
+				<source><![CDATA[DJDB: Sets Display]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_tracks.description">
+				<source><![CDATA[This plugin is used to show an audio track overview page or a detail page containing details for a single audio track.]]></source>
+			</trans-unit>
+			<trans-unit id="tx_djdb_tracks.title">
+				<source><![CDATA[DJDB: Tracks Display]]></source>
 			</trans-unit>
 		</body>
 	</file>

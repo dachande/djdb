@@ -1,12 +1,188 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-10-09T15:29:28Z">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-17T18:57:09Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="flexforms_additional.backPid" approved="yes">
+				<source><![CDATA[PageId to return to]]></source>
+				<target><![CDATA[Seiten-ID für "Zurück"-Link]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.detailPid" approved="yes">
+				<source><![CDATA[PageId for single DJ set display]]></source>
+				<target><![CDATA[Seiten-ID für DJ Set Einzelansicht]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.disableOverrideDemand" approved="yes">
+				<source><![CDATA[Disable override demand]]></source>
+				<target><![CDATA[Überschreiben von Plugin-Einstellungen deaktivieren]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.excludeAlreadyDisplayedSets" approved="yes">
+				<source><![CDATA[Exclude already displayed DJ sets]]></source>
+				<target><![CDATA[Bereits angezeigte DJ Sets ausschließen]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.featuredSetsFirst" approved="yes">
+				<source><![CDATA[Sort "Featured DJ sets" before]]></source>
+				<target><![CDATA["Hervorgehobene DJ Sets" oberhalb]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.genres" approved="yes">
+				<source><![CDATA[Genres]]></source>
+				<target><![CDATA[Genres]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.limit" approved="yes">
+				<source><![CDATA[Max records displayed]]></source>
+				<target><![CDATA[Maximale Anzahl anzuzeigender Datensätze]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.listPid" approved="yes">
+				<source><![CDATA[PageId for list display]]></source>
+				<target><![CDATA[Seiten-ID für Listenansicht]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.newSetsFirst" approved="yes">
+				<source><![CDATA[Sort "New DJ sets" before]]></source>
+				<target><![CDATA["Neue DJ Sets" oberhalb]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_additional.offset" approved="yes">
+				<source><![CDATA[Starting with given DJ set record. 0 means first record, 1 the 2nd one!]]></source>
+				<target><![CDATA[Beginnend mit DJ Set Element #]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.featuredRestriction" approved="yes">
+				<source><![CDATA[Featured DJ Sets]]></source>
+				<target><![CDATA[Hervorgehobene DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.featuredRestriction.1" approved="yes">
+				<source><![CDATA[only featured DJ set records]]></source>
+				<target><![CDATA[Nur hervorgehobene DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.featuredRestriction.2" approved="yes">
+				<source><![CDATA[except featured DJ set records]]></source>
+				<target><![CDATA[Keine hervorgehobenen DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction" approved="yes">
+				<source><![CDATA[Genre mode]]></source>
+				<target><![CDATA[Genremodus]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.all" approved="yes">
+				<source><![CDATA[Don't care, show all]]></source>
+				<target><![CDATA[Nicht berücksichtigen, alle anzeigen]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.and" approved="yes">
+				<source><![CDATA[Show items with selected genres (AND)]]></source>
+				<target><![CDATA[Zeige DJ Sets mit den ausgewählten Genres (UND)]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.notand" approved="yes">
+				<source><![CDATA[Do NOT show items with selected genres (AND)]]></source>
+				<target><![CDATA[Zeige KEINE DJ Sets mit den ausgewählten Genres (UND)]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.notor" approved="yes">
+				<source><![CDATA[Do NOT show items with selected genres (OR)]]></source>
+				<target><![CDATA[Zeige KEINE DJ Sets mit den ausgewählten Genres (ODER)]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.genreConjunction.or" approved="yes">
+				<source><![CDATA[Show items with selected genres (OR)]]></source>
+				<target><![CDATA[Zeige DJ Sets mit den ausgewählten Genres (ODER)]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.labelRestriction" approved="yes">
+				<source><![CDATA[Only show DJ set records from the following labels]]></source>
+				<target><![CDATA[Zeige nur DJ Sets der folgenden Labels]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode" approved="yes">
+				<source><![CDATA[What to display]]></source>
+				<target><![CDATA[Ausgabemodus wählen]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.select" approved="yes">
+				<source><![CDATA[Please select]]></source>
+				<target><![CDATA[Bitte wählen]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.sets_detail" approved="yes">
+				<source><![CDATA[Detail view]]></source>
+				<target><![CDATA[Detailansicht]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.sets_list" approved="yes">
+				<source><![CDATA[List view]]></source>
+				<target><![CDATA[Listenansicht]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.sets_selectedList" approved="yes">
+				<source><![CDATA[List of DJ sets]]></source>
+				<target><![CDATA[List der DJ-Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.newRestriction" approved="yes">
+				<source><![CDATA[New DJ Sets]]></source>
+				<target><![CDATA[Neue DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.newRestriction.1" approved="yes">
+				<source><![CDATA[only new DJ set records]]></source>
+				<target><![CDATA[Nur neue DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.newRestriction.2" approved="yes">
+				<source><![CDATA[except new DJ set records]]></source>
+				<target><![CDATA[Keine neuen DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy" approved="yes">
+				<source><![CDATA[Sort by]]></source>
+				<target><![CDATA[Sortieren nach]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.catno" approved="yes">
+				<source><![CDATA[Catalogue No.]]></source>
+				<target><![CDATA[Katalog Nr.]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.crdate" approved="yes">
+				<source><![CDATA[Created]]></source>
+				<target><![CDATA[Erstellt]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.no-constraint" approved="yes">
+				<source><![CDATA[No ordering]]></source>
+				<target><![CDATA[Keine Sortierung]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.release_date" approved="yes">
+				<source><![CDATA[Release date]]></source>
+				<target><![CDATA[Veröffentlichungsdatum]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.title" approved="yes">
+				<source><![CDATA[Title]]></source>
+				<target><![CDATA[Titel]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.tstamp" approved="yes">
+				<source><![CDATA[Last edited]]></source>
+				<target><![CDATA[Zuletzt bearbeitet]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection" approved="yes">
+				<source><![CDATA[Sort direction]]></source>
+				<target><![CDATA[Sortierung]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection.asc" approved="yes">
+				<source><![CDATA[Ascending]]></source>
+				<target><![CDATA[aufsteigend]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderDirection.desc" approved="yes">
+				<source><![CDATA[Descending]]></source>
+				<target><![CDATA[absteigend]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_general.selectedList" approved="yes">
+				<source><![CDATA[List of DJ sets]]></source>
+				<target><![CDATA[Liste der DJ Sets]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.additional" approved="yes">
+				<source><![CDATA[Additional]]></source>
+				<target><![CDATA[Weitere Einstellungen]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.settings" approved="yes">
+				<source><![CDATA[Settings]]></source>
+				<target><![CDATA[Einstellungen]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.template" approved="yes">
+				<source><![CDATA[Template]]></source>
+				<target><![CDATA[Vorlage]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_template.mediaMaxHeight" approved="yes">
+				<source><![CDATA[Max height for media elements]]></source>
+				<target><![CDATA[Maximale Höhe für Medienelemente]]></target>
+			</trans-unit>
+			<trans-unit id="flexforms_template.mediaMaxWidth" approved="yes">
+				<source><![CDATA[Max width for media elements]]></source>
+				<target><![CDATA[Maximale Breite für Medienelemente]]></target>
+			</trans-unit>
 			<trans-unit id="label.add_download" approved="yes">
 				<source><![CDATA[Add download option]]></source>
 				<target><![CDATA[Download Option hinzufügen]]></target>
@@ -23,21 +199,21 @@
 				<source><![CDATA[Album details]]></source>
 				<target><![CDATA[Album Details]]></target>
 			</trans-unit>
-			<trans-unit id="palette.track" approved="yes">
-				<source><![CDATA[Track details]]></source>
-				<target><![CDATA[Track Details]]></target>
-			</trans-unit>
 			<trans-unit id="palette.properties" approved="yes">
 				<source><![CDATA[Properties]]></source>
 				<target><![CDATA[Eigenschaften]]></target>
 			</trans-unit>
+			<trans-unit id="palette.track" approved="yes">
+				<source><![CDATA[Track details]]></source>
+				<target><![CDATA[Track Details]]></target>
+			</trans-unit>
+			<trans-unit id="tabs.relations" approved="yes">
+				<source><![CDATA[Relations]]></source>
+				<target><![CDATA[Relationen]]></target>
+			</trans-unit>
 			<trans-unit id="tabs.tracklist" approved="yes">
 				<source><![CDATA[Tracklist]]></source>
 				<target><![CDATA[Track Liste]]></target>
-			</trans-unit>
-			<trans-unit id="tabs.relations">
-				<source><![CDATA[Relations]]></source>
-				<target><![CDATA[Relationen]]></target>
 			</trans-unit>
 			<trans-unit id="tx_djdb_sets.description" approved="yes">
 				<source><![CDATA[This plugin is used to show a dj set overview page or a detail page containing a single dj set.]]></source>

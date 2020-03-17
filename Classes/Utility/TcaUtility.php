@@ -21,6 +21,10 @@ declare(strict_types=1);
 
 namespace Dachande\Djdb\Utility;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
+use TYPO3\CMS\Core\Database\Query\QueryHelper;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 
 class TcaUtility
@@ -67,5 +71,56 @@ class TcaUtility
     protected function getCurrentRecord(array $parameters):? array
     {
         return BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+    }
+
+    /**
+     * Get a distinct list of used label names from all set records
+     *
+     * @param array $config
+     * @return void
+     * @throws \InvalidArgumentException
+     */
+    public function getDistinctLabels(array &$config)
+    {
+        $labels = array_unique($this->getRecords(['label'], 'tx_djdb_domain_model_set'));
+        asort($labels);
+
+        foreach ($labels as $label) {
+            array_push($config['items'], [htmlspecialchars($label), $label]);
+        }
+    }
+
+    /**
+     * Get list of fields from records from database
+     *
+     * @param array $fields
+     * @param string $table
+     * @param string $where
+     * @return array
+     * @throws \InvalidArgumentException
+     */
+    protected function getRecords(array $fields, string $table, string $where = ''): array
+    {
+        $fieldsIndex = array_flip($fields);
+
+        $result = [];
+
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($table);
+        $queryBuilder->getRestrictions()
+            ->removeAll()
+            ->add(GeneralUtility::makeInstance(DeletedRestriction::class));
+
+        $res = $queryBuilder
+            ->select('*')
+            ->from($table)
+            ->where(QueryHelper::stripLogicalOperatorPrefix($where))
+            ->execute();
+
+        while ($record = $res->fetch()) {
+            $recordId = $record['uid'];
+            $result[$recordId] = (sizeof($fields) <= 1 && !empty($record[$fields[0]])) ? $record[$fields[0]] : array_intersect_key($record, $fieldsIndex);
+        }
+
+        return $result;
     }
 }

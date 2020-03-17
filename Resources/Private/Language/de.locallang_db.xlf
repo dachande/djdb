@@ -195,10 +195,6 @@
 				<source><![CDATA[Release date]]></source>
 				<target><![CDATA[Veröffentlichungsdatum]]></target>
 			</trans-unit>
-			<trans-unit id="tx_djdb_domain_model_track.field.set_position" approved="yes">
-				<source><![CDATA[Track position in Set]]></source>
-				<target><![CDATA[Trackposition im Set]]></target>
-			</trans-unit>
 			<trans-unit id="tx_djdb_domain_model_track.field.title" approved="yes">
 				<source><![CDATA[Title]]></source>
 				<target><![CDATA[Titel]]></target>
