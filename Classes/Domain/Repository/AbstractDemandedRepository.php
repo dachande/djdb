@@ -71,7 +71,11 @@ abstract class AbstractDemandedRepository extends Repository implements Demanded
         $respectEnableFields = true,
         $disableLanguageOverlayMode = false
     ): QueryInterface {
-        $query = $this->createQuery();
+        /**
+         * @var \Dachande\Djdb\Domain\Model\Dto\AbstractDemand $demand
+         */
+
+         $query = $this->createQuery();
 
         $query->getQuerySettings()->setRespectStoragePage(false);
 
@@ -98,14 +102,14 @@ abstract class AbstractDemandedRepository extends Repository implements Demanded
         }
 
         if ($demand->getLimit() !== null) {
-            $query->setLimit((int)$demand->getLimit());
+            $query->setLimit($demand->getLimit());
         }
 
         if ($demand->getOffset() !== null) {
             if (!$query->getLimit()) {
                 $query->setLimit(PHP_INT_MAX);
             }
-            $query->setOffset((int)$demand->getOffset());
+            $query->setOffset($demand->getOffset());
         }
 
         return $query;

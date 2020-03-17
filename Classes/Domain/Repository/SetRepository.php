@@ -30,11 +30,19 @@ class SetRepository extends AbstractDemandedRepository
         QueryInterface $query,
         DemandInterface $demand
     ): array {
+        /**
+         * @var \Dachande\Djdb\Domain\Model\Dto\SetDemand $demand
+         */
+
         return [];
     }
 
     protected function createOrderingsFromDemand(DemandInterface $demand): array
     {
-        return [];
+        /**
+         * @var \Dachande\Djdb\Domain\Model\Dto\SetDemand $demand
+         */
+
+         return [];
     }
 }

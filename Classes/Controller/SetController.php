@@ -94,18 +94,18 @@ class SetController extends ActionController
         // TODO: Do basic setup of demand object
         $demand->setGenres(GeneralUtility::trimExplode(',', $settings['genres'], true));
         $demand->setGenreConjunction($settings['genreConjunction']);
-        $demand->setNewRestriction($settings['newRestriction']);
-        $demand->setFeaturedRestriction($settings['featuredRestriction']);
+        $demand->setNewRestriction((int)$settings['newRestriction']);
+        $demand->setFeaturedRestriction((int)$settings['featuredRestriction']);
 
         if ($settings['orderBy']) {
             $demand->setOrder($settings['orderBy'] . ' ' . $settings['orderDirection']);
         }
 
-        $demand->setNewFirst($settings['newFirst']);
-        $demand->setFeaturedFirst($settings['featuredFirst']);
-        $demand->setLimit($settings['limit']);
-        $demand->setOffset($settings['offset']);
-        $demand->setHideIdList($settings['hideIdList']);
+        $demand->setNewFirst((bool)$settings['newSetsFirst']);
+        $demand->setFeaturedFirst((bool)$settings['featuredSetsFirst']);
+        $demand->setLimit((int)$settings['limit']);
+        $demand->setOffset((int)$settings['offset']);
+        // $demand->setHideIdList($settings['hideIdList']);
 
         // TODO: Get storage page(s) from startingpoint setting
         // $demand->setStoragePage();

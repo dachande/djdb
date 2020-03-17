@@ -37,14 +37,14 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     protected $genreConjunction = '';
 
     /**
-     * @var bool
+     * @var int
      */
-    protected $newRestriction = false;
+    protected $newRestriction = 0;
 
     /**
-     * @var bool
+     * @var int
      */
-    protected $featuredRestriction = false;
+    protected $featuredRestriction = 0;
 
     /**
      * @var string
@@ -131,9 +131,9 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     /**
      * Get the value of newRestriction
      *
-     * @return bool
+     * @return int
      */
-    public function getNewRestriction(): bool
+    public function getNewRestriction(): int
     {
         return $this->newRestriction;
     }
@@ -141,10 +141,10 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     /**
      * Set the value of newRestriction
      *
-     * @param bool $newRestriction
+     * @param int $newRestriction
      * @return void
      */
-    public function setNewRestriction(bool $newRestriction)
+    public function setNewRestriction(int $newRestriction)
     {
         $this->newRestriction = $newRestriction;
     }
@@ -152,9 +152,9 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     /**
      * Get the value of featuredRestriction
      *
-     * @return bool
+     * @return int
      */
-    public function getFeaturedRestriction(): bool
+    public function getFeaturedRestriction(): int
     {
         return $this->featuredRestriction;
     }
@@ -162,10 +162,10 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     /**
      * Set the value of featuredRestriction
      *
-     * @param bool $featuredRestriction
+     * @param int $featuredRestriction
      * @return void
      */
-    public function setFeaturedRestriction(bool $featuredRestriction)
+    public function setFeaturedRestriction(int $featuredRestriction)
     {
         $this->featuredRestriction = $featuredRestriction;
     }
@@ -257,43 +257,43 @@ abstract class AbstractDemand extends AbstractDomainObject implements DemandInte
     /**
      * Get the value of limit
      *
-     * @return int
+     * @return int|null
      */
-    public function getLimit(): int
+    public function getLimit():? int
     {
-        return $this->limit;
+        return ($this->limit >= 1) ? $this->limit : null;
     }
 
     /**
      * Set the value of limit
      *
-     * @param int $limit
+     * @param int|null $limit
      * @return void
      */
-    public function setLimit(int $limit)
+    public function setLimit(?int $limit)
     {
-        $this->limit = $limit;
+        $this->limit = ($limit === null) ? 0 : $limit;
     }
 
     /**
      * Get the value of offset
      *
-     * @return int
+     * @return int|null
      */
-    public function getOffset(): int
+    public function getOffset():? int
     {
-        return $this->offset;
+        return ($this->offset >= 1) ? $this->offset : null;
     }
 
     /**
      * Set the value of offset
      *
-     * @param int $offset
+     * @param int|null $offset
      * @return void
      */
-    public function setOffset(int $offset)
+    public function setOffset(?int $offset)
     {
-        $this->offset = $offset;
+        $this->offset = ($offset === null) ? 0 : $offset;
     }
 
     /**
