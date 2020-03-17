@@ -26,26 +26,26 @@ class SetDemand extends AbstractDemand
     /**
      * @var string
      */
-    protected $label = '';
+    protected $labelRestriction = '';
 
     /**
-     * Get the value of label
+     * Get the value of labelRestriction
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabelRestriction(): string
     {
-        return $this->label;
+        return $this->labelRestriction;
     }
 
     /**
-     * Set the value of label
+     * Set the value of labelRestriction
      *
-     * @param string $label
+     * @param string $labelRestriction
      * @return void
      */
-    public function setLabel(string $label)
+    public function setLabelRestriction(string $labelRestriction)
     {
-        $this->label = $label;
+        $this->labelRestriction = $labelRestriction;
     }
 }

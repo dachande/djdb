@@ -110,7 +110,7 @@ class SetController extends ActionController
         // TODO: Get storage page(s) from startingpoint setting
         // $demand->setStoragePage();
 
-        $demand->setLabel($settings['label']);
+        $demand->setLabelRestriction($settings['labelRestriction']);
 
         return $demand;
     }
