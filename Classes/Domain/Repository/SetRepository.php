@@ -22,6 +22,8 @@ declare(strict_types=1);
 namespace Dachande\Djdb\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use Dachande\Djdb\Utility\ConstraintUtility;
 use Dachande\Djdb\Domain\Model\DemandInterface;
 
 class SetRepository extends AbstractDemandedRepository
@@ -34,7 +36,56 @@ class SetRepository extends AbstractDemandedRepository
          * @var \Dachande\Djdb\Domain\Model\Dto\SetDemand $demand
          */
 
-        return [];
+        $constraints = [];
+
+        // genre
+        if (!empty($demand->getGenres())) {
+            $constraints['genres'] = ConstraintUtility::getGenreConstraint(
+                $query,
+                $demand->getGenres(),
+                $demand->getGenreConjunction()
+            );
+        }
+
+        // new only
+        if ($demand->getNewRestriction() === 1) {
+            $constraints['newSets'] = $query->equals('is_new', 1);
+        }
+
+        // except new
+        if ($demand->getNewRestriction() === 2) {
+            $constraints['newSets'] = $query->equals('is_new', 0);
+        }
+
+        // featureed only
+        if ($demand->getFeaturedRestriction() === 1) {
+            $constraints['featuredSets'] = $query->equals('is_featured', 1);
+        }
+
+        // except featureed
+        if ($demand->getFeaturedRestriction() === 2) {
+            $constraints['featuredSets'] = $query->equals('is_featured', 0);
+        }
+
+        // label
+        if (!empty($demand->getLabelRestriction())) {
+            $constraints['labels'] = ConstraintUtility::getLabelConstraint($query, $demand->getLabelRestriction());
+        }
+
+        // storage page
+        if ($demand->getStoragePage() != 0) {
+            $pidList = GeneralUtility::intExplode(',', $demand->getStoragePage(), true);
+            $constraints['pid'] = $query->in('pid', $pidList);
+        }
+
+        // Clean not used constraints
+        foreach ($constraints as $key => $value) {
+            if (null === $value) {
+                unset($constraints[$key]);
+            }
+        }
+
+        return $constraints;
     }
 
     protected function createOrderingsFromDemand(DemandInterface $demand): array

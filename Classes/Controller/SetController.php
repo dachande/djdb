@@ -107,8 +107,10 @@ class SetController extends ActionController
         $demand->setOffset((int)$settings['offset']);
         // $demand->setHideIdList($settings['hideIdList']);
 
-        // TODO: Get storage page(s) from startingpoint setting
-        // $demand->setStoragePage();
+        $demand->setStoragePage(PageUtility::extendPidListByChildren(
+            $settings['startingpoint'],
+            (int)$settings['recursive']
+        ));
 
         $demand->setLabelRestriction($settings['labelRestriction']);
 

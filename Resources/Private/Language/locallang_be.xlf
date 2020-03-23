@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-17T18:57:09Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-23T20:07:31Z">
 		<header>
 			<authorName>Daniel Schultheis</authorName>
 			<authorEmail>d.schultheis@kabel-salat.net</authorEmail>
@@ -91,6 +91,9 @@
 			<trans-unit id="flexforms_general.newRestriction.2">
 				<source><![CDATA[except new DJ set records]]></source>
 			</trans-unit>
+			<trans-unit id="flexforms_general.no-constraint">
+				<source><![CDATA[No constraint]]></source>
+			</trans-unit>
 			<trans-unit id="flexforms_general.orderBy">
 				<source><![CDATA[Sort by]]></source>
 			</trans-unit>
@@ -120,6 +123,9 @@
 			</trans-unit>
 			<trans-unit id="flexforms_general.orderDirection.desc">
 				<source><![CDATA[Descending]]></source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.recursive.I.inherit">
+				<source><![CDATA[Defined in TypoScript]]></source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.selectedList">
 				<source><![CDATA[List of DJ sets]]></source>
